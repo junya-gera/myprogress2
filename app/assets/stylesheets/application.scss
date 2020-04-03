@@ -1,5 +1,6 @@
 @import "reset";
 @import "sign";
+@import "header";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -8,4 +9,6 @@
 body {
     font-family: "Noto Sans Japanese";
     font-weight: bold;
+    overflow-x: hidden;
+    position: relative;
 }
