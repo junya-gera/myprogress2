@@ -40,3 +40,9 @@
     background-color: #fff;
   }
 }
+
+@media screen and (max-width: 959px) {
+  .header__menu{
+    display: none;
+  }
+}
