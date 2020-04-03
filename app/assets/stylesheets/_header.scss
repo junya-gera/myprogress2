@@ -54,6 +54,8 @@
   margin-left: auto;
   position: relative;
   z-index: 2;
+  right: -33%;
+  transition: .4s;
 }
 
 .side__menu--close{
@@ -61,6 +63,10 @@
   right:20px;
   top: 20px;
   cursor: pointer;
+}
+
+body.menu--open #side__menu{
+  right: 0;
 }
 
 @media screen and (max-width: 959px) {
