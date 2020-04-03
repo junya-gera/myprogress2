@@ -1,3 +1,11 @@
 @import "reset";
+@import "sign";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+ 
+body {
+    font-family: "Noto Sans Japanese";
+    font-weight: bold;
+}
