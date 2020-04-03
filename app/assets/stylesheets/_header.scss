@@ -41,8 +41,21 @@
   }
 }
 
+#bars{
+  margin: 0 20px 0 auto;
+  cursor: pointer;
+  display: none;
+}
+
+#side--menu{
+  
+}
+
 @media screen and (max-width: 959px) {
   .header__menu{
     display: none;
+  }
+  #bars{
+    display: block;
   }
 }
