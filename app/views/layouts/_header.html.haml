@@ -1,0 +1,18 @@
+.header
+  %ul.header__menus
+    %li.header__menu
+      .fas.fa-puzzle-piece.fa-lg
+      = link_to "毎日頑張る犬", root_path, class: "header__menu--link"
+    %li.header__menu
+      .fas.fa-users.fa-lg
+      = link_to "ユーザー一覧", users_path, class: "header__menu--link"
+    %li.header__menu
+      .fas.fa-search.fa-lg
+      = link_to "ユーザー検索", root_path, class: "header__menu--link"
+    -if user_signed_in?
+      %li.header__menu
+        .fas.fa-sign-out-alt.fa-lg
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__menu--link"
+      %li.header__menu.myname
+        .fas.fa-user.fa-lg
+        = link_to current_user.name, root_path, class: "header__menu--link"
