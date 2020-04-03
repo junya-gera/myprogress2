@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   background-color: $color1;
   height: 65px;
   width: 100vw;
@@ -52,10 +53,12 @@
   width: 33%;
   background-color: $color2;
   margin-left: auto;
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 0;
+  z-index: 100;
   right: -33%;
-  transition: .4s;
+  transition-duration: .4s;
+  transition-property: right;
 }
 
 .side__menu--close{
@@ -65,8 +68,30 @@
   cursor: pointer;
 }
 
+.side{
+  &__menus{
+  list-style: none;
+  padding-top: 50px;
+  }
+  &__menu{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    &--link{
+      text-decoration: none;
+      color: black;
+    }
+    &--link:hover{
+      transition: all 0.3s ease 0s;
+      border-bottom: 3px solid #0066FF;
+    }
+  }
+}
+
+
 body.menu--open #side__menu{
   right: 0;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .6);
 }
 
 @media screen and (max-width: 959px) {

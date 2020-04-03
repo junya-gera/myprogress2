@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on("turbolinks:load", function() {
   $('#bars').on('click',function(){
     $('body').addClass('menu--open')
   });
