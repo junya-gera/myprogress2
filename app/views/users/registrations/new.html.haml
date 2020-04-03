@@ -36,4 +36,5 @@
           .actions
             = f.submit "新規登録", class:"btn"
 
-  = render "users/shared/links"
+        - if controller_name != 'sessions'
+          = link_to "ログイン", new_session_path(resource_name), class: "btn signup--signin"
