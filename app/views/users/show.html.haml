@@ -1,6 +1,6 @@
 .user--info
   .user--info__image
-    = image_tag @user.image, class: 'icon_image'
+    = image_tag @user.image.url, class: 'icon_image'
   
   .user--info__name
     %p= @user.nickname
