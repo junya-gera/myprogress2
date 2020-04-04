@@ -5,5 +5,4 @@
   .user--info__name
     %p= @user.name
     -if @user.id == current_user.id
-    = link_to "プロフィール編集", edit_user_path(current_user), class: "user--info__edit", method: :get
-
+      = link_to "プロフィール編集", edit_user_path(current_user), class: "user--info__edit", method: :get
