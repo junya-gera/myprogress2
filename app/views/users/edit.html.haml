@@ -1,0 +1,24 @@
+.top
+  .top__container
+    .sign
+      .sign__top
+        %pプロフィール編集
+      .sign__container
+        = form_with(model: current_user, local: true) do |f|
+          .field
+            = f.label :名前
+            %br
+            = f.text_field :nickname, autofocus: true, autocomplete: "name",class: "sign__container--input"
+          .field
+            = f.label :メールアドレス 
+            %br
+            = f.email_field :email, placeholder:"メールアドレス", autofocus: true, autocomplete: "email",class: "sign__container--input"
+         
+          .field
+            = f.label :画像を選択して下さい 
+            %br
+            = f.file_field :image,class: "sign__container--input"
+
+          .actions
+          = f.submit "登録", class:"btn"
+ 
