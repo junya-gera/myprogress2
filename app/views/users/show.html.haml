@@ -3,6 +3,6 @@
     = image_tag @user.image, class: 'icon_image'
   
   .user--info__name
-    %p= @user.name
+    %p= @user.nickname
     -if @user.id == current_user.id
       = link_to "プロフィール編集", edit_user_path(current_user), class: "user--info__edit", method: :get
