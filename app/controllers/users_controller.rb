@@ -8,11 +8,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    binding.pry
+    @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to user_path(current_user)
+      redirect_to @user
+
     else
       render :edit
+
     end
   end
 
