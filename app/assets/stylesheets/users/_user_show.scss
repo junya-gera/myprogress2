@@ -1,0 +1,39 @@
+.user__menu{
+  margin-right: auto;
+  margin-top: 65px;
+  padding-top: 30px;
+  height: calc(100vh - 95px);
+  width: 15%;
+  background-color: $color2;
+}
+
+.user--info{
+  &__name{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+  }
+  &__edit{
+    text-decoration: none;
+    border-bottom: 1px solid blue;
+    color: black;
+    font-size: 18px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+  &__edit:hover{
+    color: #4689FF;
+  }
+  
+}
+
+
+.icon_image {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  object-fit: cover;
+  display: block;
+  margin:0 auto;
+}

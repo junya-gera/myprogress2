@@ -1,0 +1,9 @@
+.user__menu
+  .user--info
+    .user--info__image
+      = image_tag @user.image.url, class: 'icon_image', alt: 'default.png'
+    
+    .user--info__name
+      %p= @user.nickname
+      -if @user.id == current_user.id
+        = link_to "プロフィール編集", edit_user_path(current_user), class: "user--info__edit", method: :get
