@@ -25,8 +25,8 @@
             = f.submit "かんたんログイン", class:"btn easybtn"
 
         - if devise_mapping.registerable? && controller_name != 'registrations'
-          = link_to "新規登録", new_registration_path(resource_name), class:"sign__container--registration" 
+          = link_to "新規登録", new_registration_path(resource_name), class:"sign__container--registration devise--link" 
           %br
         - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
-          = link_to "パスワードをお忘れですか？", new_password_path(resource_name),class:"sign__container--recover"
+          = link_to "パスワードをお忘れですか？", new_password_path(resource_name),class:"sign__container--recover devise--link"
     
