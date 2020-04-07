@@ -70,6 +70,8 @@ gem 'jquery-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 group :production do
   gem 'unicorn', '5.4.1'
