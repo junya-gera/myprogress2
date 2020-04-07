@@ -14,5 +14,5 @@
             = f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"ご登録されたメールアドレス", class: "sign__container--input"
 
             = f.submit "パスワード再設定のメールを送る", class: "btn"
-
-        = render "users/shared/links"
+        .new--password--links
+          = render "users/shared/links"
