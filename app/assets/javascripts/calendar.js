@@ -28,7 +28,7 @@ $(function () {
       week: '週',
       day: '日'
       },
-
+      height: 650
   
   });
   
