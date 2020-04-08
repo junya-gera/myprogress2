@@ -77,6 +77,6 @@ gem 'pry-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
-group :production do
-  gem 'unicorn', '5.4.1'
+group :production, :staging do
+  gem 'unicorn'
 end
