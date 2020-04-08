@@ -12,8 +12,17 @@ $(function () {
   $(document).on('turbolinks:before-cache', clearCalendar);
 
   $('#calendar').fullCalendar({
-    events: '/events.json'
+    events: '/events.json',
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay'
+  },
   
   });
+  
+ 
+
+
   
 });
