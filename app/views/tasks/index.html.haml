@@ -1,4 +1,4 @@
-.task--index
+.task
   %h1 #{current_user.nickname}のタスク一覧
 
   %table
@@ -19,6 +19,6 @@
           %td= task.content
           %td= task.start_date
           %td= task.end_date
-          %td= link_to 'Show', task
+          -# %td= link_to 'Show', task
           -# %td= link_to 'Edit', new_user_path(task)
-          %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }
+          -# %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }
