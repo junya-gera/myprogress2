@@ -17,19 +17,27 @@
   }
   &__unit{
     &--title{
-      font-size: 24px;
-      padding-left: 10px;
-
+      font-size: 20px;
+      padding: 5px 15px;
+    }
+    &--content{
+      padding-right: 15px;
+    }
+    &--start_date{
+      padding-right: 15px;
+    }
+    &--end_date{
+      padding-right: 15px;
     }
     &--header{
       font-size: 25px;
       padding:5px;
       &--title{
-        width:20%;
+        width:18%;
         padding-left: 10px;
       }
       &--content{
-        width: 25%;
+        width: 30%;
       }
       &--start_date{
         width:20%;
