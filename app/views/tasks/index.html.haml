@@ -1,23 +1,24 @@
-%h1 Listing tasks
+.task--index
+  %h1 {current_user.nickname} タスク一覧
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Content
-      %th Start date
-      %th End date
-      %th
-      %th
-      %th
-
-  %tbody
-    - @tasks.each do |task|
+  %table
+    %thead
       %tr
-        %td= task.title
-        %td= task.content
-        %td= task.start_date
-        %td= task.end_date
-        %td= link_to 'Show', task
-        -# %td= link_to 'Edit', new_user_path(task)
-        %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }
+        %th Title
+        %th Content
+        %th Start date
+        %th End date
+        %th
+        %th
+        %th
+
+    %tbody
+      - @tasks.each do |task|
+        %tr
+          %td= task.title
+          %td= task.content
+          %td= task.start_date
+          %td= task.end_date
+          %td= link_to 'Show', task
+          -# %td= link_to 'Edit', new_user_path(task)
+          %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }
