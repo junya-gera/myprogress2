@@ -1,13 +1,42 @@
 .task{
   height: 100%;
   margin:100px auto 0;
-  width: 80%;
+  width: 90%;
+  border: 2px solid $color3;
+  box-shadow: 4px 4px $color4;
+
   &__index{
     background-color: $color2;
-    &__title{
+    width: 100%;
+    &--title{
+      padding: 10px;
       text-align: center;
-      font-size: 40px;
-      border-bottom: 2px solid $color3;
+      font-size: 35px;
+      border-bottom: 1px solid $color3;
+    }
+  }
+  &__unit{
+    &--title{
+      font-size: 24px;
+      padding-left: 10px;
+
+    }
+    &--header{
+      font-size: 25px;
+      padding:5px;
+      &--title{
+        width:20%;
+        padding-left: 10px;
+      }
+      &--content{
+        width: 30%;
+      }
+      &--start_date{
+        width:15%;
+      }
+      &--end_date{
+        width: 15%;
+      }
     }
   }
 }
