@@ -56,11 +56,23 @@
       line-height: 60px;
       margin-left: 10px;
       border: 1px solid black;
+      box-shadow: 1px 1px #03f;
+    }
+    &__btn a{
+      text-decoration: none;
+    }
+    &__btn:hover{
+      opacity: 0.9;
     }
   }
 }
-
+.underline-none{
+  text-decoration: none;
+  color: black;
+}
 .delete--btn{
   background-color: red;
+}
+.color-white{
   color: #fff;
 }

@@ -21,9 +21,9 @@
             %td.task__unit--content= task.content
             %td.task__unit--start_date= task.start_date.to_s(:datetime_jp)
             %td.task__unit--end_date= task.end_date.to_s(:datetime_jp)
-            %td.task__unit--btn 詳細
-            %td.task__unit--btn 編集
-            %td.task__unit--btn.delete--btn 削除
+            %td.task__unit--btn=link_to "詳細", user_task_path(task, current_user),class: "underline-none"
+            %td.task__unit--btn=link_to "編集", edit_user_task_path(task, current_user),class: "underline-none"
+            %td.task__unit--btn.delete--btn=link_to "削除", user_task_path(task, current_user), post: :delete,class: "underline-none color-white"
 
 
 
