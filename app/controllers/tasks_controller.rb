@@ -70,6 +70,6 @@ class TasksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:title, :content, :start_date, :end_date)
+      params.require(:task).permit(:title, :content, :start_date, :end_date).merge(user_id: current_user.id)
     end
 end
