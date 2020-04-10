@@ -1,24 +1,23 @@
 .task
-  %h1 #{current_user.nickname}のタスク一覧
-
-  %table
-    %thead
-      %tr
-        %th Title
-        %th Content
-        %th Start date
-        %th End date
-        %th
-        %th
-        %th
-
-    %tbody
+  .task__index
+    .task__index--title 
+      %p #{current_user.nickname}さんのタスク一覧
+    .task--unit
       - @tasks.each do |task|
-        %tr
-          %td= task.title
-          %td= task.content
-          %td= task.start_date
-          %td= task.end_date
-          -# %td= link_to 'Show', task
-          -# %td= link_to 'Edit', new_user_path(task)
-          -# %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }
+        %p.task__unit--title= task.title
+        %p.task__unit--content= task.content
+        %p.task__unit--start_date= task.start_date
+        %p.task__unit--end_date= task.end_date
+
+
+
+
+
+
+
+
+
+
+  -# %td= link_to 'Show', task
+  -# %td= link_to 'Edit', new_user_path(task)
+  -# %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }

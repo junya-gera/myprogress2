@@ -1,4 +1,14 @@
 .task{
+  height: 100%;
   margin:100px auto 0;
   width: 80%;
+  &__index{
+    background-color: $color2;
+    &__title{
+      text-align: center;
+      font-size: 40px;
+      border-bottom: 2px solid $color3;
+    }
+  }
 }
+
