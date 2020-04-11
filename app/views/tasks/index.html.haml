@@ -1,7 +1,10 @@
 .task
+  = link_to "タスクの追加", new_user_task_path(current_user), class: "task__new--btn"
+
   .task__index
     .task__index--title 
       %p #{current_user.nickname}さんのタスク一覧
+
     %table
       %thead
         %tr.task__unit--header
