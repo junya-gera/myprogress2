@@ -1,0 +1,42 @@
+@mixin btn{
+  background-color: $color4;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 2px 2px #03f;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+
+.task__new{
+  background-color: $color2;
+  padding:20px 0 0 20px;
+  position: relative;
+  &--header{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 16px;
+  }
+  &--render{
+    text-align: center;
+  }
+}
+
+.index--back--btn{
+  @include btn;
+  display: inline-block;
+  padding: 8px 24px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.task__edit{
+  &--btn{
+    @include btn;
+    display: inline-block;
+    padding: 8px;
+    margin: 8px;
+  }
+}

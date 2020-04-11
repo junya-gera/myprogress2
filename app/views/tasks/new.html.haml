@@ -1,0 +1,7 @@
+.task
+  .task__new
+    %p.task__new--header タスクの追加
+    .task__new--render
+      = render 'form'
+
+    = link_to '一覧に戻る', user_tasks_path(current_user), class: "index--back--btn"

@@ -1,0 +1,91 @@
+@mixin btn{
+  background-color: $color4;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 2px 2px #03f;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.task{
+  position: relative;
+  height: 100%;
+  margin:100px auto 0;
+  width: 90%;
+  border: 2px solid $color3;
+  box-shadow: 4px 4px $color4;
+
+  &__index{
+    background-color: $color2;
+    width: 100%;
+    &--title{
+      padding: 10px;
+      text-align: center;
+      font-size: 35px;
+    }
+  }
+  &__unit{
+    border-bottom: 1px solid $color3;
+    &--title{
+      font-size: 20px;
+      padding: 15px 15px;
+    }
+    &--content{
+      padding-right: 15px;
+    }
+    &--start_date{
+      padding-right: 15px;
+    }
+    &--end_date{
+      padding-right: 15px;
+    }
+    &--header{
+      font-size: 25px;
+      padding: 5px;
+      border-bottom: 2px solid $color3;
+      &--title{
+        width:18%;
+        padding-left: 10px;
+      }
+      &--content{
+        width: 28%;
+      }
+      &--start_date{
+        width:20%;
+      }
+      &--end_date{
+        width: 20%;
+      }
+    }
+    &--btn{
+      @include btn;
+      padding: 8px;
+      display: inline;
+      line-height: 60px;
+      margin-left: 10px;
+    }
+  }
+  &__show{
+    background-color: $color2;
+    width: 100%;
+  }
+  &__new--btn{
+    @include btn;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline;
+    padding: 8px 24px;
+  }
+}
+.underline-none{
+  text-decoration: none;
+  color: black;
+}
+.delete--btn{
+  background-color: red;
+}
+.color-white{
+  color: #fff;
+}

@@ -1,0 +1,39 @@
+@mixin btn{
+  background-color: $color4;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 2px 2px #03f;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.task__form{
+  &--field{
+    margin-bottom: 16px;
+  }
+  &--label{
+    font-size: 20px;
+    padding-right: 10px;
+  }
+  &--title--input{
+      font-size: 18px;
+      height: 28px;
+      padding: 5px;
+      width: 390px;
+      margin-right: 35px;
+  }
+  
+  &--content{
+    font-size: 18px;
+    line-height: 32px;
+    padding: 5px;
+    width: 400px;
+    height: 32px;
+  }
+  &--btn{
+    @include btn;
+    padding: 8px 20px;
+    margin: 8px;
+  }
+}
