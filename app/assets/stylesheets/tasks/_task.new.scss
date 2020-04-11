@@ -16,7 +16,11 @@
   &--header{
     text-align: center;
     font-size: 35px;
-}
+    margin-bottom: 16px;
+  }
+  &--render{
+    text-align: center;
+  }
 }
 
 .index--back--btn{
