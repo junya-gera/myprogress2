@@ -56,14 +56,13 @@
       line-height: 60px;
       margin-left: 10px;
       border: 1px solid black;
-      box-shadow: 1px 1px #03f;
+      box-shadow: 2px 2px #03f;
     }
-    &__btn a{
-      text-decoration: none;
-    }
-    &__btn:hover{
-      opacity: 0.9;
-    }
+  }
+  &__show{
+    background-color: $color2;
+    width: 100%;
+ 
   }
 }
 .underline-none{
