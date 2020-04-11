@@ -2,5 +2,27 @@
   .task__new
     %p.task__new--header タスクの編集
     .task__new--render
-      = render 'form'
+      = form_for @task, url: user_task_path do |f|
+        - if @task.errors.any?
+          #error_explanation
+            %h2= "#{pluralize(@task.errors.count, "error")} prohibited this task from being saved:"
+            %ul
+              - @task.errors.full_messages.each do |message|
+                %li= message
+
+        .field.task__form--field
+          = f.label :タイトル, class: "task__form--label"
+          = f.text_field :title, class: "task__form--title--input"
+        .field.task__form--field
+          = f.label :メモ, class: "task__form--label"
+          = f.text_area :content, class: "task__form--content"
+        .field.task__form--field
+          = f.label :開始日, class: "task__form--label"
+          = f.datetime_select :start_date
+        .field.task__form--field
+          = f.label :終了日, class: "task__form--label"
+          = f.datetime_select :end_date
+        .actions
+          = f.submit '編集', class: "task__form--btn"
+
     = link_to '一覧に戻る', user_tasks_path(current_user), class: "index--back--btn"

@@ -14,5 +14,5 @@
       %b.task__show--end_date 終了日:
       = @task.end_date.to_s(:datetime_jp)
 
-    = link_to '編集', edit_user_task_path(@task, current_user), class:"task__edit--btn"
+    = link_to '編集', edit_user_task_path(current_user,@task), class:"task__edit--btn"
     = link_to '一覧に戻る', user_tasks_path(current_user), class: "index--back--btn"
