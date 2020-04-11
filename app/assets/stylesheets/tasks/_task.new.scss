@@ -1,3 +1,14 @@
+@mixin btn{
+  background-color: $color4;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 2px 2px #03f;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+
 .task__new{
   background-color: $color2;
   padding:20px 0 0 20px;
@@ -9,14 +20,9 @@
 }
 
 .index--back--btn{
-  background-color: $color4;
-  padding: 8px 24px;
+  @include btn;
   display: inline-block;
-  margin: 10px;
-  text-decoration: none;
-  color: black;
-  border: 1px solid black;
-  box-shadow: 2px 2px #03f;
+  padding: 8px 24px;
   position: absolute;
   right: 10px;
   bottom: 10px;

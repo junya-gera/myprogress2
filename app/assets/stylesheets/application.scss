@@ -21,11 +21,16 @@
 @import "users/user_show";
 @import "tasks/task.index";
 @import "tasks/task.new";
+@import "tasks/task.form";
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
 @import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
  
+
+
+
 body {
     font-family: "Noto Sans Japanese";
     font-weight: bold;
