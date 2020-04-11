@@ -1,0 +1,23 @@
+.task__new{
+  background-color: $color2;
+  padding:20px 0 0 20px;
+  position: relative;
+  &--header{
+    text-align: center;
+    font-size: 35px;
+}
+}
+
+.index--back--btn{
+  background-color: $color4;
+  padding: 8px 24px;
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 2px 2px #03f;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
