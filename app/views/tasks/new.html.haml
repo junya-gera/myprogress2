@@ -24,5 +24,28 @@
         .actions
           = f.submit '追加', class: "task__form--btn"
 
+    .task__index--title 
+      %p #{current_user.nickname}さんのタスク一覧
 
-    = link_to '一覧に戻る', user_tasks_path(current_user), class: "index--back--btn"
+    %table
+      %thead
+        %tr.task__unit--header
+          %th.task__unit--header--title タイトル
+          %th.task__unit--header--content メモ
+          %th.task__unit--header--start_date 開始日
+          %th.task__unit--header--end_date 終了日
+          %th
+          %th
+          %th
+
+
+      %tbody
+        - @tasks.each do |task|
+          %tr.task__unit
+            %td.task__unit--title= task.title
+            %td.task__unit--content= task.content
+            %td.task__unit--start_date= task.start_date.to_s(:datetime_jp)
+            %td.task__unit--end_date= task.end_date.to_s(:datetime_jp)
+            %td.task__unit--btn=link_to "詳細", user_task_path(current_user,task),class: "underline-none"
+            %td.task__unit--btn=link_to "編集", edit_user_task_path(current_user,task),class: "underline-none"
+            %td.task__unit--btn.delete--btn=link_to "削除", user_task_path(current_user,task), method: :delete,class: "underline-none color-white"
