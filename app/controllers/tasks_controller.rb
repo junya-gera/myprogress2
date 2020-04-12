@@ -4,12 +4,17 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.includes(:user)
+    # @tasks = Task.includes(:user)
+    @user = current_user
+    if user_signed_in?
+      @tasks = Task.where(user_id: current_user)
+    end
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    
   end
 
   # GET /tasks/new
