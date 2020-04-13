@@ -1,0 +1,16 @@
+$(function () {
+ 
+    function buildHTML(event){
+      var html = `<tr class="event__unit">
+                    <td class="event__unit--title"><%= ${event.title} %></td>
+                    <td class="event__unit--content"><%= ${event.content} %></td>
+                    <td class="event__unit--start_date"><%= ${event.start}.to_s(:datetime_jp) %></td>
+                    <td class="event__unit--end_date"><%= ${event.end}.to_s(:datetime_jp) %></td>
+                    <td class="event__unit--btn"><%= link_to "詳細", user_event_path(current_user,event),class: "underline-none" %></td>
+                    <td class="event__unit--btn"><%= link_to "編集", edit_user_event_path(current_user,event),class: "underline-none" %></td>
+                    <td class="event__unit--btn delete--btn"><%= link_to "削除", user_event_path(current_user,event), method: :delete,class: "underline-none color-white" %></td>
+                  </tr>
+                  `
+      return html;
+    }
+})
