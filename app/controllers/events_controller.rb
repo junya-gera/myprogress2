@@ -8,6 +8,7 @@ class EventsController < ApplicationController
     @user = current_user
     if user_signed_in?
       event_datas = Event.where(user_id: current_user)
+      @events = Event.where(user_id: current_user)
     end
 
     @datas= [];
