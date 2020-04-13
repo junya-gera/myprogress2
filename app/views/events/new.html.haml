@@ -22,7 +22,7 @@
           = f.label :終了日, class: "event__form--label"
           = f.datetime_select :end_date
         .actions
-          = f.submit '追加', class: "event__form--btn"
+          = f.submit '追加', class: "event__form--btn", id: "new_task"
 
     .event__index--title 
       %p #{current_user.nickname}さんのタスク一覧
