@@ -1,0 +1,27 @@
+.event
+  .event__new
+    %p.event__new--header タスクの編集
+    .event__new--render
+      = form_for @event, url: user_event_path do |f|
+        - if @event.errors.any?
+          #error_explanation
+            %ul
+              - @event.errors.full_messages.each do |message|
+                %li= message
+
+        .field.event__form--field
+          = f.label :タイトル, class: "event__form--label"
+          = f.text_field :title, class: "event__form--title--input"
+        .field.event__form--field
+          = f.label :メモ, class: "event__form--label"
+          = f.text_area :content, class: "event__form--content"
+        .field.event__form--field
+          = f.label :開始日, class: "event__form--label"
+          = f.datetime_select :start_date
+        .field.event__form--field
+          = f.label :終了日, class: "event__form--label"
+          = f.datetime_select :end_date
+        .actions
+          = f.submit '編集', class: "event__form--btn"
+
+    = link_to '一覧に戻る', user_events_path(current_user), class: "index--back--btn"

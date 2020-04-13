@@ -7,8 +7,8 @@
       %p= @user.nickname
       -if @user.id == current_user.id
         = link_to "プロフィール編集", edit_user_path(current_user), class: "user--info__edit", method: :get
-        = link_to "タスク一覧", user_tasks_path(current_user), class: "user--info__edit"
-        = link_to "タスクの追加", new_user_task_path(current_user), class: "user--info__edit"
+        = link_to "タスク一覧", user_events_path(current_user), class: "user--info__edit"
+        = link_to "タスクの追加", new_user_event_path(current_user), class: "user--info__edit"
  
 .calendar
   #calendar

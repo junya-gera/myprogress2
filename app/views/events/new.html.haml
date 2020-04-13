@@ -1,0 +1,51 @@
+.event
+  .event__new
+    %p.event__new--header タスクの追加
+    .event__new--render
+      = form_for @event, url: user_events_path do |f|
+        - if @event.errors.any?
+          #error_explanation
+            %ul
+              - @event.errors.full_messages.each do |message|
+                %li= message
+
+        .field.event__form--field
+          = f.label :タイトル, class: "event__form--label"
+          = f.text_field :title, class: "event__form--title--input"
+        .field.event__form--field
+          = f.label :メモ, class: "event__form--label"
+          = f.text_area :content, class: "event__form--content"
+        .field.event__form--field
+          = f.label :開始日, class: "event__form--label"
+          = f.datetime_select :start_date
+        .field.event__form--field
+          = f.label :終了日, class: "event__form--label"
+          = f.datetime_select :end_date
+        .actions
+          = f.submit '追加', class: "event__form--btn"
+
+    .event__index--title 
+      %p #{current_user.nickname}さんのタスク一覧
+
+    %table
+      %thead
+        %tr.event__unit--header
+          %th.event__unit--header--title タイトル
+          %th.event__unit--header--content メモ
+          %th.event__unit--header--start_date 開始日
+          %th.event__unit--header--end_date 終了日
+          %th
+          %th
+          %th
+
+
+      %tbody
+        - @events.each do |event|
+          %tr.event__unit
+            %td.event__unit--title= event.title
+            %td.event__unit--content= event.content
+            %td.event__unit--start_date= event.start_date.to_s(:datetime_jp)
+            %td.event__unit--end_date= event.end_date.to_s(:datetime_jp)
+            %td.event__unit--btn=link_to "詳細", user_event_path(current_user,event),class: "underline-none"
+            %td.event__unit--btn=link_to "編集", edit_user_event_path(current_user,event),class: "underline-none"
+            %td.event__unit--btn.delete--btn=link_to "削除", user_event_path(current_user,event), method: :delete,class: "underline-none color-white"

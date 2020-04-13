@@ -9,7 +9,7 @@
 }
 
 
-.task__new{
+.event__new{
   background-color: $color2;
   padding:20px 0;
   position: relative;
@@ -32,7 +32,7 @@
   bottom: 10px;
 }
 
-.task__edit{
+.event__edit{
   &--btn{
     @include btn;
     display: inline-block;

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     if user_signed_in?
-      @tasks = Task.where(user_id: current_user)
+      @events = Event.where(user_id: current_user)
     end
   end
   

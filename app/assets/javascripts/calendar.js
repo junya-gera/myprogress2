@@ -12,7 +12,7 @@ $(function () {
   $(document).on('turbolinks:before-cache', clearCalendar);
 
   $('#calendar').fullCalendar({
-    events: '/events.json',
+    events: '/index.json',
     header: {
       left: 'prev,next today',
       center: 'title',
