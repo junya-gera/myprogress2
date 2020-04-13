@@ -78,6 +78,7 @@ gem 'mini_magick'
 gem 'pry-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'slim-rails'
 
 group :production, :staging do
   gem 'unicorn'
