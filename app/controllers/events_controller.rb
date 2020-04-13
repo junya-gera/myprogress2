@@ -7,8 +7,19 @@ class EventsController < ApplicationController
     # @events = event.includes(:user)
     @user = current_user
     if user_signed_in?
-      @events = Event.where(user_id: current_user)
+      event_datas = Event.where(user_id: current_user)
     end
+
+    @datas= [];
+    event_datas.each do |data|
+      @datas += [
+        'title' => data[:title],
+        'content' => data[:content],
+        'start' => data[:start_date],
+        'end' => data[:end_date]
+      ]
+    end
+
   end
 
   # GET /events/1
