@@ -8,7 +8,7 @@
   border-radius: 3px;
 }
 
-.task{
+.event{
   position: relative;
   height: 100%;
   margin:100px auto 0;
@@ -20,6 +20,7 @@
     background-color: $color2;
     width: 100%;
     &--title{
+      border-top: 2px solid $color3;
       padding: 10px;
       text-align: center;
       font-size: 35px;
@@ -45,11 +46,11 @@
       padding: 5px;
       border-bottom: 2px solid $color3;
       &--title{
-        width:18%;
-        padding-left: 10px;
+        width:20%;
+        padding: 0 10px;
       }
       &--content{
-        width: 28%;
+        width: 26%;
       }
       &--start_date{
         width:20%;

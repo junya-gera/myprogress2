@@ -23,10 +23,10 @@ require 'rails_helper'
 # removed from Rails core in Rails 5, but can be added back in via the
 # `rails-controller-testing` gem.
 
-RSpec.describe TasksController, type: :controller do
+RSpec.describe EventsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
-  # Task. As you add validations to Task, be sure to
+  # event. As you add validations to event, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
@@ -38,12 +38,12 @@ RSpec.describe TasksController, type: :controller do
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
-  # TasksController. Be sure to keep this updated too.
+  # EventsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
   describe "GET #index" do
     it "returns a success response" do
-      Task.create! valid_attributes
+      Event.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_successful
     end
@@ -51,8 +51,8 @@ RSpec.describe TasksController, type: :controller do
 
   describe "GET #show" do
     it "returns a success response" do
-      task = Task.create! valid_attributes
-      get :show, params: {id: task.to_param}, session: valid_session
+      event = Event.create! valid_attributes
+      get :show, params: {id: event.to_param}, session: valid_session
       expect(response).to be_successful
     end
   end
@@ -66,29 +66,29 @@ RSpec.describe TasksController, type: :controller do
 
   describe "GET #edit" do
     it "returns a success response" do
-      task = Task.create! valid_attributes
-      get :edit, params: {id: task.to_param}, session: valid_session
+      event = Event.create! valid_attributes
+      get :edit, params: {id: event.to_param}, session: valid_session
       expect(response).to be_successful
     end
   end
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Task" do
+      it "creates a new event" do
         expect {
-          post :create, params: {task: valid_attributes}, session: valid_session
-        }.to change(Task, :count).by(1)
+          post :create, params: {event: valid_attributes}, session: valid_session
+        }.to change(event, :count).by(1)
       end
 
-      it "redirects to the created task" do
-        post :create, params: {task: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(Task.last)
+      it "redirects to the created event" do
+        post :create, params: {event: valid_attributes}, session: valid_session
+        expect(response).to redirect_to(event.last)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
-        post :create, params: {task: invalid_attributes}, session: valid_session
+        post :create, params: {event: invalid_attributes}, session: valid_session
         expect(response).to be_successful
       end
     end
@@ -100,41 +100,41 @@ RSpec.describe TasksController, type: :controller do
         skip("Add a hash of attributes valid for your model")
       }
 
-      it "updates the requested task" do
-        task = Task.create! valid_attributes
-        put :update, params: {id: task.to_param, task: new_attributes}, session: valid_session
-        task.reload
+      it "updates the requested event" do
+        event = Event.create! valid_attributes
+        put :update, params: {id: event.to_param, event: new_attributes}, session: valid_session
+        event.reload
         skip("Add assertions for updated state")
       end
 
-      it "redirects to the task" do
-        task = Task.create! valid_attributes
-        put :update, params: {id: task.to_param, task: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(task)
+      it "redirects to the event" do
+        event = Event.create! valid_attributes
+        put :update, params: {id: event.to_param, event: valid_attributes}, session: valid_session
+        expect(response).to redirect_to(event)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'edit' template)" do
-        task = Task.create! valid_attributes
-        put :update, params: {id: task.to_param, task: invalid_attributes}, session: valid_session
+        event = Event.create! valid_attributes
+        put :update, params: {id: event.to_param, event: invalid_attributes}, session: valid_session
         expect(response).to be_successful
       end
     end
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested task" do
-      task = Task.create! valid_attributes
+    it "destroys the requested event" do
+      event = Event.create! valid_attributes
       expect {
-        delete :destroy, params: {id: task.to_param}, session: valid_session
-      }.to change(Task, :count).by(-1)
+        delete :destroy, params: {id: event.to_param}, session: valid_session
+      }.to change(event, :count).by(-1)
     end
 
-    it "redirects to the tasks list" do
-      task = Task.create! valid_attributes
-      delete :destroy, params: {id: task.to_param}, session: valid_session
-      expect(response).to redirect_to(tasks_url)
+    it "redirects to the events list" do
+      event = Event.create! valid_attributes
+      delete :destroy, params: {id: event.to_param}, session: valid_session
+      expect(response).to redirect_to(events_url)
     end
   end
 

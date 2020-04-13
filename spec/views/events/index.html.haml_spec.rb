@@ -1,20 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe "tasks/index", type: :view do
+RSpec.describe "events/index", type: :view do
   before(:each) do
-    assign(:tasks, [
-      Task.create!(
+    assign(:events, [
+      Event.create!(
         :title => "Title",
         :content => "MyText"
       ),
-      Task.create!(
+      Event.create!(
         :title => "Title",
         :content => "MyText"
       )
     ])
   end
 
-  it "renders a list of tasks" do
+  it "renders a list of events" do
     render
     assert_select "tr>td", :text => "Title".to_s, :count => 2
     assert_select "tr>td", :text => "MyText".to_s, :count => 2

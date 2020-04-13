@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "tasks/show", type: :view do
+RSpec.describe "events/show", type: :view do
   before(:each) do
-    @task = assign(:task, Task.create!(
+    @event = assign(:event, Event.create!(
       :title => "Title",
       :content => "MyText"
     ))
