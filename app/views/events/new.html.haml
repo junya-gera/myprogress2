@@ -2,7 +2,7 @@
   .event__new
     %p.event__new--header タスクの追加
     .event__new--render
-      = form_for @event, url: user_events_path do |f|
+      = form_for @event, url: user_events_path, remote: true do |f|
         - if @event.errors.any?
           #error_explanation
             %ul
