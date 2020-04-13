@@ -27,7 +27,7 @@
             = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__menu--link"
           %li.header__menu.myname
             .fas.fa-user.fa-lg
-            = link_to current_user.nickname, user_path(current_user), class: "header__menu--link"
+            = link_to current_user.nickname, user_events_path(current_user), class: "header__menu--link"
         -else
           %li.header__menu
             .fas.fa-sign-in-alt.fa-lg
