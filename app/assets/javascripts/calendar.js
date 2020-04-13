@@ -13,7 +13,9 @@ $(function () {
 
   $('#calendar').fullCalendar({
     events: window.event_datas,
-  
+    dayClick: function() {
+      alert('a day has been clicked!');
+    },
     header: {
       left: 'prev,next today',
       center: 'title',
