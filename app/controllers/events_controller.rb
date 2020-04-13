@@ -16,7 +16,9 @@ class EventsController < ApplicationController
         'title' => data[:title],
         'content' => data[:content],
         'start' => data[:start_date],
-        'end' => data[:end_date]
+        'end' => data[:end_date],
+        'color' => '#98d6ea',
+        'textColor' => 'black'
       ]
     end
 

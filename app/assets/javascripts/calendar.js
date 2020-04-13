@@ -12,7 +12,6 @@ $(function () {
   $(document).on('turbolinks:before-cache', clearCalendar);
 
   $('#calendar').fullCalendar({
-    // events: "/users/#{params[:id]}/events.json",
     events: window.event_datas,
   
     header: {
