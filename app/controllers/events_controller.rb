@@ -77,7 +77,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to user_events_path(current_user), notice: 'event was successfully destroyed.' }
+      format.html { redirect_to new_user_event_path(current_user), notice: 'event was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
