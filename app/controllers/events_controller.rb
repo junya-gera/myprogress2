@@ -50,7 +50,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       if @event.save
         format.html { redirect_to new_user_event_path(current_user), notice: 'event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
+        format.json
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
