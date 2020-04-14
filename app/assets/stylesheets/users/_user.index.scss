@@ -22,7 +22,25 @@
     }
     &--nickname{
       margin-left: 20px;
-      font-size: 30px;
+    }
+    &--tasks{
+      margin-top: 10px;
+      font-size: 20px;
     }
   }
+}
+
+.user--nickname--link{
+  text-decoration: none;
+  color: black;
+  border-bottom: 4px solid $color3;
+  font-size: 30px;
+}
+
+.user--nickname--link:hover{
+  opacity: 0.6;
+}
+
+.event--content{
+  font-size: 18px;
 }
