@@ -1,4 +1,3 @@
-$(document).on('turbolinks:load', function () {
   
   $('#new_event').on('submit', function(e){
     e.preventDefault();
@@ -13,7 +12,8 @@ $(document).on('turbolinks:load', function () {
       contentType: false
     })
     .done(function(data){
-      // var html = buildHTML(data);
+      var html = buildHTML(data);
+      $('.event__units').append(html);
       $('#event_title').val('');
       $('#event_content').val('');
       $('.event__form--btn').prop('disabled', false);
@@ -22,4 +22,3 @@ $(document).on('turbolinks:load', function () {
       alert('error');
     })
   })
-})
