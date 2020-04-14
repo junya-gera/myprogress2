@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function () {
-
+  
   $('#new_event').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
