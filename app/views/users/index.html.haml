@@ -7,6 +7,6 @@
       .user__index--unit
         = image_tag user.image.url, class: 'user__index--unit--image', alt: 'default.png'
         .user__index--unit--nickname 
-          %p=link_to user.nickname, user_events_path(user)
+          %p=link_to user.nickname, user_events_path(user_id: user.id)
  
         .user__index--unit--tasks
