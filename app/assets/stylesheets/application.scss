@@ -18,7 +18,8 @@
 @import "reset";
 @import "sign";
 @import "header";
-@import "users/user_show";
+@import "users/user.show";
+@import "users/user.index";
 @import "events/event.index";
 @import "events/event.new";
 @import "events/event.form";
