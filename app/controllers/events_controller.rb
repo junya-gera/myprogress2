@@ -49,7 +49,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to new_user_event_path(current_user), notice: 'event was successfully created.' }
+        # format.html { redirect_to new_user_event_path(current_user), notice: 'event was successfully created.' }
         format.json
       else
         format.html { render :new }

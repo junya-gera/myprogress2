@@ -13,8 +13,7 @@ $(document).on('turbolinks:load', function () {
       contentType: false
     })
     .done(function(data){
-      var html = buildHTML(data);
-      $('.event__units').append(html);
+      // var html = buildHTML(data);
       $('#event_title').val('');
       $('#event_content').val('');
       $('.event__form--btn').prop('disabled', false);
