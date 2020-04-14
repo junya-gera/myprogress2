@@ -6,16 +6,23 @@
   border: 2px solid $color3;
   box-shadow: 4px 4px $color4;
   &--title{
-    border-top: 2px solid $color3;
+    border-bottom: 2px solid $color3;
     padding: 10px;
     text-align: center;
     font-size: 35px;  
   }
   &--unit{
+    padding: 20px;
+    border-bottom: 2px solid $color3;
+    display: flex;
     &--image{
       height: 200px;
       width: 200px;
       border-radius: 100px;    
+    }
+    &--nickname{
+      margin-left: 20px;
+      font-size: 30px;
     }
   }
 }
