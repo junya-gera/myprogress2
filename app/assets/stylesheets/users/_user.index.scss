@@ -1,0 +1,14 @@
+.user__index{
+  width: 80%;
+  height: 100%;
+  background-color: $color2;
+  margin:100px auto 0;
+  border: 2px solid $color3;
+  box-shadow: 4px 4px $color4;
+  &--title{
+    border-top: 2px solid $color3;
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;  
+  }
+}
