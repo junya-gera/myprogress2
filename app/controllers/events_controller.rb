@@ -5,11 +5,8 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     # @events = event.includes(:user)
-    @user = current_user
-    if user_signed_in?
-      event_datas = Event.where(user_id: current_user)
-      @events = Event.where(user_id: current_user)
-    end
+    @user = User.find(params[:user_id])
+    event_datas = Event.where(user_id: params[:user_id])
 
     @datas= [];
     event_datas.each do |data|

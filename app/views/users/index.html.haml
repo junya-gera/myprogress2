@@ -1,0 +1,16 @@
+.user__index
+  .user__index--title
+    %p ユーザー一覧
+
+  .user__index--units
+    - @users.each do |user|
+      .user__index--unit
+        = image_tag user.image.url, class: 'user__index--unit--image', alt: 'default.png'
+        .user__index--unit--nickname
+          %p=link_to user.nickname, user_events_path(user_id: user.id), class: "user--nickname--link"
+          .user__index--unit--tasks
+            %p タスク一覧
+            - user.events.each do |event|
+              ・
+              %span=event.title       
+              %br
