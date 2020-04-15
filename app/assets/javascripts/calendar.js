@@ -13,9 +13,13 @@ $(function () {
 
   $('#calendar').fullCalendar({
     events: window.event_datas,
-    dayClick: function() {
-      alert('a day has been clicked!');
+    eventClick: function(info) {
+      alert('タイトル:' + info.title);
     },
+    dayClick: function(){
+      $(this).css('background-color', '#f5fcc1');
+    },
+    
     header: {
       left: 'prev,next today',
       center: 'title',
