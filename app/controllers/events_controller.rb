@@ -18,6 +18,7 @@ class EventsController < ApplicationController
         'content' => data[:content],
         'start' => data[:start_date],
         'end' => data[:end_date],
+        'url' => "/users/#{@user.id}/events/#{data[:id]}",
         'color' => '#98d6ea',
         'textColor' => 'black',
         'borderColor' => '#007bff'

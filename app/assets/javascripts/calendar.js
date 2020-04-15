@@ -14,7 +14,7 @@ $(function () {
   $('#calendar').fullCalendar({
     events: window.event_datas,
     eventClick: function(info) {
-      alert('タイトル:' + info.title);
+      window.open(info.event.url);
     },
     dayClick: function(){
       $(this).css('background-color', '#f5fcc1');
