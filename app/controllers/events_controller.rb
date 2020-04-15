@@ -7,7 +7,6 @@ class EventsController < ApplicationController
     # @events = event.includes(:user)
     @user = User.find(params[:user_id])
     event_datas = Event.where(user_id: params[:user_id])
-    
 
     @datas= [];
     event_datas.each do |data|
@@ -15,7 +14,11 @@ class EventsController < ApplicationController
         'title' => data[:title],
         'content' => data[:content],
         'start' => data[:start_date],
-        'end' => data[:end_date]
+        'end' => data[:end_date],
+        'url' => "/users/#{@user.id}/events/#{data[:id]}",
+        'color' => '#98d6ea',
+        'textColor' => 'black',
+        'borderColor' => '#007bff'
       ]
     end
 
@@ -45,7 +48,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       if @event.save
         format.html { redirect_to new_user_event_path(current_user), notice: 'event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
+        format.json
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
@@ -72,7 +75,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to user_events_path(current_user), notice: 'event was successfully destroyed.' }
+      format.html { redirect_to new_user_event_path(current_user), notice: 'event was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -12,9 +12,14 @@ $(function () {
   $(document).on('turbolinks:before-cache', clearCalendar);
 
   $('#calendar').fullCalendar({
-    // events: "/users/#{params[:id]}/events.json",
     events: window.event_datas,
-  
+    eventClick: function(info) {
+      window.open(info.event.url);
+    },
+    dayClick: function(){
+      $(this).css('background-color', '#f5fcc1');
+    },
+    
     header: {
       left: 'prev,next today',
       center: 'title',
@@ -38,9 +43,5 @@ $(function () {
 
   
   });
-  
-
-
-
   
 });
