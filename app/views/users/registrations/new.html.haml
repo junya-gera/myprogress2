@@ -39,3 +39,5 @@
         - if controller_name != 'sessions'
           = link_to "ログイン", new_session_path(resource_name), class: "btn signup--signin"
           = link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post, class: "btn facebook--btn"
+          = link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post, class: "btn google--btn"
+
