@@ -34,7 +34,7 @@
             = f.file_field :image,class: "sign__container--input"
 
           .actions
-            = f.submit "新規登録", class:"btn"
+            = f.submit "新規登録", class:"btn new--signup--btn"
 
         - if controller_name != 'sessions'
           = link_to "ログイン", new_session_path(resource_name), class: "btn signup--signin"
