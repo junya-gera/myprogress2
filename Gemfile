@@ -80,6 +80,9 @@ gem 'momentjs-rails'
 gem 'pry-rails'
 gem 'slim-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
 
 group :production, :staging do
   gem 'unicorn'
