@@ -21,7 +21,10 @@
 
           .actions
             = f.submit "ログイン", class:"btn signup--signin"
-          .actions
+        .test--user
+          = form_for(User.new, as: :user, url: session_path(:user)) do |f|
+            = f.hidden_field :email ,value: "test@example.com"
+            = f.hidden_field :password ,value: "testtest"
             = f.submit "かんたんログイン", class:"btn easybtn"
           = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post, class: "btn facebook--btn"
           = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class: "btn google--btn"
