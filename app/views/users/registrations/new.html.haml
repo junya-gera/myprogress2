@@ -16,17 +16,17 @@
             = f.label :メールアドレス
             %br
             = f.email_field :email, autofocus: true, autocomplete: "email",class: "sign__container--input"
+          - if @sns_id.present?
+            = hidden_field_tag :sns_auth, true
+          - else
+            .field
+              = f.label :パスワード
+              = f.password_field :password, autocomplete: "new-password",class: "sign__container--input"
 
-          .field
-            = f.label :パスワード
-              -if @minimum_password_length
-            %br
-            = f.password_field :password, autocomplete: "new-password",class: "sign__container--input"
-
-          .field
-            = f.label :パスワード確認 
-            %br
-            = f.password_field :password_confirmation, autocomplete: "new-password",class: "sign__container--input"
+            .field
+              = f.label :パスワード確認 
+              %br
+              = f.password_field :password_confirmation, autocomplete: "new-password",class: "sign__container--input"
 
           .field
             = f.label :画像を選択して下さい
@@ -34,7 +34,10 @@
             = f.file_field :image,class: "sign__container--input"
 
           .actions
-            = f.submit "新規登録", class:"btn"
+            = f.submit "新規登録", class:"btn new--signup--btn"
 
         - if controller_name != 'sessions'
           = link_to "ログイン", new_session_path(resource_name), class: "btn signup--signin"
+          = link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post, class: "btn facebook--btn"
+          = link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post, class: "btn google--btn"
+
