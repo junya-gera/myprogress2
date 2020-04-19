@@ -48,4 +48,21 @@
   height: 653px;
   border-radius: 10px;
   border: 5px solid #3366FF;
+  &__title{
+    background-color: #E8FFE8;
+    height: 50px;
+    border-bottom: 1px solid silver;
+    display: flex;
+    align-items: center;
+    &--text{
+      margin: 0 auto;
+      font-size: 20px;
+    }
+  }
+}
+
+#modal-close{
+  margin-right: 10px;
+  color: red;
+  cursor: pointer;
 }
