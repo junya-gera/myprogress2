@@ -10,3 +10,18 @@
 .user__menu{
   position: relative;
 }
+
+.task__edit{
+  margin-left: 30px;
+  line-height: 65px;
+  font-size: 18px;
+}
+
+.task__edit--link{
+  display: inline;
+}
+
+.task__edit--link:hover{
+  transition: all 0.3s ease 0s;
+  border-bottom: 3px solid #0066FF;
+}
