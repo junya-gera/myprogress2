@@ -25,3 +25,12 @@
   transition: all 0.3s ease 0s;
   border-bottom: 3px solid #0066FF;
 }
+
+.task__index{
+  background-color: $color4;
+  width: 540px;
+  height: 548px;
+  position: absolute;
+  left: calc(12% + 30px);
+  top: 115px;
+}
