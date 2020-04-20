@@ -5,14 +5,13 @@ class PuzzlesController < ApplicationController
   end
 
   def create
-    @puzzle = Puzzle.new(puzzle_params)
-    @puzzle.save
+    @puzzle = Puzzle.create(puzzle_params)
     redirect_to root_path
   end
   
 private
   def puzzle_params
-    params.require(:puzzle).permit(:task).merge(user_id: current_user.id)
+    params.permit(:task).merge(user_id: current_user.id)
   end
   
 end
