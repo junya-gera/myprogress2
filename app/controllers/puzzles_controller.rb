@@ -6,7 +6,7 @@ class PuzzlesController < ApplicationController
 
   def create
     @puzzle = Puzzle.create(puzzle_params)
-    redirect_to root_path
+    redirect_to user_puzzles_path(current_user)
   end
   
 private
