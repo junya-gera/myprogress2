@@ -2,6 +2,9 @@ class PuzzlesController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
+    if user_signed_in?
+      @puzzles = Puzzle.where(user_id: current_user)
+    end
   end
 
   def create

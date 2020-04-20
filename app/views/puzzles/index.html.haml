@@ -74,6 +74,11 @@
       = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
       = f.submit '決定',id:"task-btn-9" , class:"task-modal__btn"
 
-
 .task__index
-  .task__index--unit
+  .task__index--unit1
+    %p タスク1:
+    -if @puzzles[0] === nil
+      %p タスクが入力されていません
+    -else
+      %p= @puzzles[0].task
+
