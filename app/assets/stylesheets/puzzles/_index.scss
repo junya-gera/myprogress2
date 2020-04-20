@@ -28,12 +28,13 @@
 }
 
 .task__index{
-  background-color: $color4;
+  background-color: $color3;
   width: 540px;
   height: 548px;
   position: absolute;
   left: calc(12% + 30px);
   top: 115px;
+  border: 3px groove $color4;
 }
 
 .task-modal{
