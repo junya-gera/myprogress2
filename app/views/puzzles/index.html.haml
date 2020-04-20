@@ -20,6 +20,11 @@
     %p.task-modal__title--text タスクを入力してください
     .fas.fa-window-close.fa-lg#modal-close
 
+  .task-modal__edit
+  %p タスク1
+  = form_with(model: @puzzle, local: true, id: "input-task-1") do |f|
+    = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+    = f.submit '決定',id:"task-btn-1" , class:"task-modal__btn"
 
 
 .task__index
