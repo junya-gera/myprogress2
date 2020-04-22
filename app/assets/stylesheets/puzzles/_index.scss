@@ -1,4 +1,17 @@
+@mixin task-box{
+  content: '';
+  height: 60px;
+  width: 100%;
+  border-bottom: 2px solid $color4;
+  display: flex;
+  align-items: center;
+}
 
+@mixin task-show{
+  margin-left: 10px;
+  font-size: 20px;
+  line-height: 60px;
+}
 
 .puzzle__menu{
   background-color: $color3;
@@ -32,11 +45,65 @@
 .task__index{
   background-color: $color3;
   width: 540px;
-  height: 548px;
+  height: 558px;
   position: absolute;
   left: calc(12% + 30px);
   top: 115px;
   border: 3px groove $color4;
+  &--unit1{
+    @include task-box;
+  }
+  &--unit1 p{
+    @include task-show;
+  }
+  &--unit2{
+    @include task-box;
+  }
+  &--unit2 p{
+    @include task-show;
+  }
+  &--unit3{
+    @include task-box;
+  }
+  &--unit3 p{
+    @include task-show;
+  }
+  &--unit4{
+    @include task-box;
+  }
+  &--unit4 p{
+    @include task-show;
+  }
+  &--unit5{
+    @include task-box;
+  }
+  &--unit5 p{
+    @include task-show;
+  }
+  &--unit6{
+    @include task-box;
+  }
+  &--unit6 p{
+    @include task-show;
+  }
+  &--unit7{
+    @include task-box;
+  }
+  &--unit7 p{
+    @include task-show;
+  }
+  &--unit8{
+    @include task-box;
+  }
+  &--unit8 p{
+    @include task-show;
+  }
+  &--unit9{
+    @include task-box;
+  }
+  &--unit9 p{
+    @include task-show;
+  }
 }
 
 .task-modal{
