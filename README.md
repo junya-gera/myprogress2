@@ -9,6 +9,7 @@
 楽しくタスクに取り組む習慣をつける手助けになれば良いなと思い作りました。
 
 # 本番環境URL
+http://myprogress2.xyz. （まだアクセスできません）
 
 ログイン画面のかんたんログインをクリックすることで、ゲストユーザーとしてログインできます。
 
@@ -31,8 +32,7 @@
 ![myprogress1](https://i.gyazo.com/18c510cc2669fd0ad28d1389ae969dda.png)
 
 ![myprogress2](https://i.gyazo.com/f615f1b9fe9c4f695ea96c41f6ea733c.png)
-![myprogress2](https://i.gyazo.com/a257ed27bfbd782490a0fb18d473b987.mp4)
-
+![タスクパズル](https://user-images.githubusercontent.com/60377569/79971695-a6d07f00-84cf-11ea-853c-a35a2fa27966.gif)
 
 
 # 工夫したポイント
