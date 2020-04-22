@@ -81,6 +81,10 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[0].task
+    .round.position
+      %input#checkbox.TL-btn{:type => "checkbox"}/
+      %label{:for => "checkbox"}
+
 
   .task__index--unit2
     %p タスク2:

@@ -203,4 +203,9 @@
 .round input[type="checkbox"]:checked + label:after {
   opacity: 1;
 }
+
+.position{
+  position: absolute;
+  right: 25px;
+}
 /*チェックボタン終わり*/
