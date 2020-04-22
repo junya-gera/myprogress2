@@ -56,12 +56,20 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|title|string|
-|content|text|
-|start_date|datetime|
-|end_date|datetime|
+|square|boolean|null: false, default: false|
+|task|string|
 |user_id|bigint|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
 
+## sns_credentialsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|provider|string|
+|uid|string|
+|user_id|bigint|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
