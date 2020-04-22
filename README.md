@@ -30,22 +30,38 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|nickname|string|null: false|
 |image|string|
 |email|string|null: false|unique: true|
 |password|string|null: false|unique: true|
 
 ### Association
+- has_many :events
 - has_many :puzzles
+
+## eventsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|title|string|
+|content|text|
+|start_date|datetime|
+|end_date|datetime|
+|user_id|bigint|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
 
 ## puzzlesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|title|string|
+|content|text|
+|start_date|datetime|
+|end_date|datetime|
+|user_id|bigint|null: false, foreign_key: true|
 
 ### Association
-- has_many :tasks
 - belongs_to :user
 
