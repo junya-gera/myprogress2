@@ -209,3 +209,72 @@
   right: 25px;
 }
 /*チェックボタン終わり*/
+
+.canvas--wrapper{
+  width: 540px;
+  height: 540px;
+  border: 1px solid black;
+  position: relative;
+  position: absolute;
+  right: 70px;
+  bottom: 90px;
+}
+#stage{
+  position: absolute;
+}
+
+#top-left{
+  position: absolute;
+}
+
+#top-center{
+  position: absolute;
+  top: 0;
+  left: 180px;
+}
+
+#top-right{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#center-left{
+  position: absolute;
+  top: 180px;
+  left: 0;
+}
+
+#center-center{
+  position: absolute;
+  top: 180px;
+  left: 180px;
+}
+
+#center-right{
+  position: absolute;
+  top: 180px;
+  right: 0;
+}
+
+#bottom-left{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#bottom-center{
+  position: absolute;
+  bottom: 0;
+  right: 180px;
+}
+
+#bottom-right{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#line{
+  position: absolute;
+}
