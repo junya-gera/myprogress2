@@ -10,9 +10,11 @@
 
 # 本番環境URL
 
+ログイン画面のかんたんログインをクリックすることで、ゲストユーザーとしてログインできます。
+
 # 使用技術
 - Haml,Sass,jQuery
-- fullcalendar,canvas
+- FullCalendar,canvas
 - Ruby 2.5.1
 - Ruby on Rails 5.2.4
 - AWS(VPC,EC2,RDS,Route53)
@@ -27,6 +29,7 @@
   - 9つのタスクを登録し、完了ボタンを押せばパズルのマスが1つ外れます。全て完了したら中の絵が現れます。
 
 ![myprogress1](https://i.gyazo.com/18c510cc2669fd0ad28d1389ae969dda.png)
+
 ![myprogress2](https://i.gyazo.com/f615f1b9fe9c4f695ea96c41f6ea733c.png)
 ![myprogress2](https://i.gyazo.com/a257ed27bfbd782490a0fb18d473b987.mp4)
 
