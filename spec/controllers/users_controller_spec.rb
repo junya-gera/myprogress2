@@ -2,7 +2,8 @@ require 'rails_helper'
 
 describe UsersController do
   describe 'GET #edit' do
-    it "@tweetに正しい値が入っていること" do
+    it "@userに正しい値が入っていること" do
+      user = create(:user)
     end
 
 
