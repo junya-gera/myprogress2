@@ -48,6 +48,8 @@ group :development, :test do
   gem 'ed25519'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
+
 end
 
 group :development do
