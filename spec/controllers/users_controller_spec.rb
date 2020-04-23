@@ -16,4 +16,12 @@ describe UsersController do
     end
   end
 
+  describe 'GET #index' do
+    it "@tweetに正しい値が入っていること" do
+    end
+
+    it "index.html.erbに遷移すること" do
+    end
+  end
+
 end
