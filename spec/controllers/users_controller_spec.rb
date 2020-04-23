@@ -17,7 +17,9 @@ describe UsersController do
   end
 
   describe 'GET #index' do
-    it "@tweetに正しい値が入っていること" do
+    it "@usersに正しい値が入っていること" do
+      users = create_list(:user, 3) 
+      get :index
     end
 
     it "index.html.erbに遷移すること" do
