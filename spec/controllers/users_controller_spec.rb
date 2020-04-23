@@ -24,7 +24,8 @@ describe UsersController do
     end
 
     it "index.html.erbに遷移すること" do
-      
+      get :index
+      expect(response).to render_template :index
     end
   end
 
