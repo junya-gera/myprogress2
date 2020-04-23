@@ -4,6 +4,8 @@ describe UsersController do
   describe 'GET #edit' do
     it "@userに正しい値が入っていること" do
       user = create(:user)
+      get :edit, params: { id: user }
+      expect(assigns(:user)).to eq user
     end
 
 
