@@ -27,7 +27,7 @@ describe UsersController do
     it "show.html.erbに遷移すること" do
       user = create(:user)
       get :show, params: { id: user }
-      expect(response).to render_template :edit
+      expect(response).to render_template :show
     end
   end
 
