@@ -10,7 +10,8 @@ describe UsersController do
 
 
     it "edit.html.erbに遷移すること" do
-      get :edit,
+      user = create(:user)
+      get :edit, params: { id: user }
       expect(response).to render_template :edit
     end
   end
