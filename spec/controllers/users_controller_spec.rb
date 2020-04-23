@@ -20,9 +20,11 @@ describe UsersController do
     it "@usersに正しい値が入っていること" do
       users = create_list(:user, 3) 
       get :index
+      expect(assigns(:users)).to match(users)
     end
 
     it "index.html.erbに遷移すること" do
+      
     end
   end
 
