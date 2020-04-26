@@ -88,6 +88,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 gem 'dotenv-rails'
+gem 'fog-aws'
 
 group :production, :staging do
   gem 'unicorn'
