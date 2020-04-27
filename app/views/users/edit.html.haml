@@ -18,16 +18,6 @@
             = f.label :メールアドレス 
             %br
             = f.email_field :email, placeholder:"メールアドレス", autofocus: true, autocomplete: "email",class: "sign__container--input"
-          -# .field
-          -#   = f.label :パスワード
-          -#     -if @minimum_password_length
-          -#   %br
-          -#   = f.password_field :password, autocomplete: "new-password",class: "sign__container--input"
-
-          -# .field
-          -#   = f.label :パスワード確認 
-          -#   %br
-          -#   = f.password_field :password_confirmation, autocomplete: "new-password",class: "sign__container--input"
 
           .field
             = f.label :画像を選択して下さい 
@@ -35,5 +25,5 @@
             = f.file_field :image,class: "sign__container--input"
 
           .actions
-          = f.submit "登録", class:"btn"
+          = f.submit "登録", class:"btn edit--btn"
  

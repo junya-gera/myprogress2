@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to @user
+      redirect_to user_events_path(current_user)
 
     else
       render :edit

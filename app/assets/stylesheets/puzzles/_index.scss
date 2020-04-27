@@ -1,0 +1,280 @@
+@mixin task-box{
+  content: '';
+  height: 60px;
+  width: 100%;
+  border-bottom: 2px solid $color4;
+  display: flex;
+  align-items: center;
+}
+
+@mixin task-show{
+  margin-left: 10px;
+  font-size: 20px;
+  line-height: 60px;
+}
+
+.puzzle__menu{
+  background-color: $color3;
+  height: 65px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 12%;
+}
+
+.user__menu{
+  position: relative;
+}
+
+.task__edit{
+  margin-left: 30px;
+  line-height: 65px;
+  font-size: 18px;
+}
+
+.task__edit--link{
+  display: inline;
+  cursor: pointer;
+}
+
+.task__edit--link:hover{
+  transition: all 0.3s ease 0s;
+  border-bottom: 3px solid #0066FF;
+}
+
+.task__index{
+  background-color: $color3;
+  width: 540px;
+  height: 558px;
+  position: absolute;
+  left: calc(12% + 30px);
+  top: 115px;
+  border: 3px groove $color4;
+  &--unit1{
+    @include task-box;
+  }
+  &--unit1 p{
+    @include task-show;
+  }
+  &--unit2{
+    @include task-box;
+  }
+  &--unit2 p{
+    @include task-show;
+  }
+  &--unit3{
+    @include task-box;
+  }
+  &--unit3 p{
+    @include task-show;
+  }
+  &--unit4{
+    @include task-box;
+  }
+  &--unit4 p{
+    @include task-show;
+  }
+  &--unit5{
+    @include task-box;
+  }
+  &--unit5 p{
+    @include task-show;
+  }
+  &--unit6{
+    @include task-box;
+  }
+  &--unit6 p{
+    @include task-show;
+  }
+  &--unit7{
+    @include task-box;
+  }
+  &--unit7 p{
+    @include task-show;
+  }
+  &--unit8{
+    @include task-box;
+  }
+  &--unit8 p{
+    @include task-show;
+  }
+  &--unit9{
+    @include task-box;
+  }
+  &--unit9 p{
+    @include task-show;
+  }
+}
+
+.task-modal{
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .6);
+  display: none;
+  background-color: #fff;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 540px;
+  height: 653px;
+  border-radius: 10px;
+  border: 5px solid #3366FF;
+  &__title{
+    background-color: $color2;
+    height: 50px;
+    border-bottom: 1px solid silver;
+    display: flex;
+    align-items: center;
+    &--text{
+      margin: 0 auto;
+      font-size: 20px;
+    }
+  }
+  &__edit{
+    height: 60px;
+    border-bottom: 1px solid silver;
+    display: flex;
+    align-items: center;
+    padding:3px 0;
+  }
+  &__edit p{
+    font-size: 20px;
+    line-height: 60px;
+    padding-left: 5px;
+  }
+  &__input{
+    border-radius: 4px;
+    margin-left: 10px;
+    height: 30px;
+    font-size: 20px;
+    width: 370px;
+  }
+  &__btn{
+    margin-left: 10px;
+    padding: 20px;
+  }
+}
+
+#modal-close{
+  margin-right: 10px;
+  color: red;
+  cursor: pointer;
+}
+
+/*チェックボタン始まり*/
+.round {
+  position: relative;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.position{
+  position: absolute;
+  right: 25px;
+}
+/*チェックボタン終わり*/
+
+.canvas--wrapper{
+  width: 540px;
+  height: 540px;
+  border: 1px solid black;
+  position: relative;
+  position: absolute;
+  right: 70px;
+  bottom: 90px;
+}
+#stage{
+  position: absolute;
+}
+
+#top-left{
+  position: absolute;
+}
+
+#top-center{
+  position: absolute;
+  top: 0;
+  left: 180px;
+}
+
+#top-right{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#center-left{
+  position: absolute;
+  top: 180px;
+  left: 0;
+}
+
+#center-center{
+  position: absolute;
+  top: 180px;
+  left: 180px;
+}
+
+#center-right{
+  position: absolute;
+  top: 180px;
+  right: 0;
+}
+
+#bottom-left{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#bottom-center{
+  position: absolute;
+  bottom: 0;
+  right: 180px;
+}
+
+#bottom-right{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#line{
+  position: absolute;
+}
