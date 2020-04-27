@@ -50,11 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: myprogress2_production
-  username: root
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
-<<<<<<< HEAD
   host: <%= ENV['DB_HOSTNAME'] %>
-=======
-  socket: /var/lib/mysql/mysql.sock
->>>>>>> 8fd30b918c437c31dfc96cddd86d4fa02431e8fb
