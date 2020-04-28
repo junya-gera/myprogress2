@@ -20,7 +20,7 @@ http://www.myprogress2.xyz.
 - FullCalendar,canvas
 - Ruby 2.5.1
 - Ruby on Rails 5.2.4
-- AWS(VPC,EC2,RDS,Route53,S3)
+- AWS(VPC/EC2/RDS/Route53/S3/ACM)
 - Nginx,unicorn
 - RSpec
 - Rubocop
