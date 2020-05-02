@@ -5,6 +5,7 @@ class PuzzlesController < ApplicationController
     if user_signed_in?
       @puzzles = Puzzle.where(user_id: current_user)
     end
+    is_puzzle?
   end
 
   def create
