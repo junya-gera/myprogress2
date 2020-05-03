@@ -19,59 +19,61 @@
     %p.task-modal__title--text タスクを入力してください
     .fas.fa-window-close.fa-lg#modal-close
 
-  .task-modal__edit
-    %p タスク1
-    = form_with(model: @puzzle, local: true, id: "input-task-1") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-1" , class:"task-modal__btn"
 
-  .task-modal__edit
-    %p タスク2
-    = form_with(model: @puzzle, local: true, id: "input-task-2") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-2" , class:"task-modal__btn"
+  - @puzzles.each do |puzzle|
+    .task-modal__edit
+      %p タスク1
+      = form_for model: puzzle, url: user_puzzle_path do |f|
+        = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+        = f.submit '決定',id:"task-btn-1" , class:"task-modal__btn"
 
-  .task-modal__edit
-    %p タスク3
-    = form_with(model: @puzzle, local: true, id: "input-task-3") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-3" , class:"task-modal__btn"
+  -# .task-modal__edit
+  -#   %p タスク2
+  -#   = form_with(model: @puzzle, local: true, id: "input-task-2") do |f|
+  -#     = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+  -#     = f.submit '決定',id:"task-btn-2" , class:"task-modal__btn"
 
-  .task-modal__edit
-    %p タスク4
-    = form_with(model: @puzzle, local: true, id: "input-task-4") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-4" , class:"task-modal__btn"
+  -# .task-modal__edit
+  -#   %p タスク3
+  -#   = form_with(model: @puzzle, local: true, id: "input-task-3") do |f|
+  -#     = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+  -#     = f.submit '決定',id:"task-btn-3" , class:"task-modal__btn"
 
-  .task-modal__edit
-    %p タスク5
-    = form_with(model: @puzzle, local: true, id: "input-task-5") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-5" , class:"task-modal__btn"
+  -# .task-modal__edit
+  -#   %p タスク4
+  -#   = form_with(model: @puzzle, local: true, id: "input-task-4") do |f|
+  -#     = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+  -#     = f.submit '決定',id:"task-btn-4" , class:"task-modal__btn"
 
-  .task-modal__edit
-    %p タスク6
-    = form_with(model: @puzzle, local: true, id: "input-task-6") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-6" , class:"task-modal__btn"
+  -# .task-modal__edit
+  -#   %p タスク5
+  -#   = form_with(model: @puzzle, local: true, id: "input-task-5") do |f|
+  -#     = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+  -#     = f.submit '決定',id:"task-btn-5" , class:"task-modal__btn"
 
-  .task-modal__edit
-    %p タスク7
-    = form_with(model: @puzzle, local: true, id: "input-task-7") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-7" , class:"task-modal__btn"
+  -# .task-modal__edit
+  -#   %p タスク6
+  -#   = form_with(model: @puzzle, local: true, id: "input-task-6") do |f|
+  -#     = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+  -#     = f.submit '決定',id:"task-btn-6" , class:"task-modal__btn"
 
-  .task-modal__edit
-    %p タスク8
-    = form_with(model: @puzzle, local: true, id: "input-task-8") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-8" , class:"task-modal__btn"
+  -# .task-modal__edit
+  -#   %p タスク7
+  -#   = form_with(model: @puzzle, local: true, id: "input-task-7") do |f|
+  -#     = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+  -#     = f.submit '決定',id:"task-btn-7" , class:"task-modal__btn"
 
-  .task-modal__edit
-    %p タスク9
-    = form_with(model: @puzzle, local: true, id: "input-task-9") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-9" , class:"task-modal__btn"
+  -# .task-modal__edit
+  -#   %p タスク8
+  -#   = form_with(model: @puzzle, local: true, id: "input-task-8") do |f|
+  -#     = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+  -#     = f.submit '決定',id:"task-btn-8" , class:"task-modal__btn"
+
+  -# .task-modal__edit
+  -#   %p タスク9
+  -#   = form_with(model: @puzzle, local: true, id: "input-task-9") do |f|
+  -#     = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
+  -#     = f.submit '決定',id:"task-btn-9" , class:"task-modal__btn"
 
 .task__index
   .task__index--unit1
