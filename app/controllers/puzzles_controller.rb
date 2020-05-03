@@ -4,8 +4,13 @@ class PuzzlesController < ApplicationController
     @user = User.find(params[:user_id])
     if user_signed_in?
       @puzzles = Puzzle.where(user_id: current_user)
+
+      if @puzzles == []
+        9.times do
+          Puzzle.create(user_id: @user.id)
+        end
+      end
     end
-    is_puzzle?
   end
 
   def create
