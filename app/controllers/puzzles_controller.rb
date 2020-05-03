@@ -17,6 +17,15 @@ class PuzzlesController < ApplicationController
     @puzzle = Puzzle.create(puzzle_params)
     redirect_to user_puzzles_path(current_user)
   end
+
+  def update
+    @puzzle = Puzzle.find(params[:id])
+    if @puzzle.update(puzzle_params)
+      redirect_to user_puzzles_path(current_user)
+    else
+      render :index
+    end
+  end
   
 private
   def puzzle_params
