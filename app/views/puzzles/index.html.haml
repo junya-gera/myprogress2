@@ -30,6 +30,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[1].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[1]), class: "task__index--edit--link"
     .round.position
       %input#checkbox2.TC-btn{:type => "checkbox"}/
       %label{:for => "checkbox2"}
@@ -41,6 +43,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[2].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[2]), class: "task__index--edit--link"
     .round.position
       %input#checkbox3.TR-btn{:type => "checkbox"}/
       %label{:for => "checkbox3"}
@@ -52,6 +56,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[3].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[3]), class: "task__index--edit--link"
     .round.position
       %input#checkbox4.CL-btn{:type => "checkbox"}/
       %label{:for => "checkbox4"}
@@ -63,6 +69,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[4].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[4]), class: "task__index--edit--link"
     .round.position
       %input#checkbox5.CC-btn{:type => "checkbox"}/
       %label{:for => "checkbox5"}
@@ -74,6 +82,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[5].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[5]), class: "task__index--edit--link"
     .round.position
       %input#checkbox6.CR-btn{:type => "checkbox"}/
       %label{:for => "checkbox6"}
@@ -85,6 +95,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[6].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[6]), class: "task__index--edit--link"
     .round.position
       %input#checkbox7.BL-btn{:type => "checkbox"}/
       %label{:for => "checkbox7"}
@@ -96,6 +108,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[7].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[7]), class: "task__index--edit--link"
     .round.position
       %input#checkbox8.BC-btn{:type => "checkbox"}/
       %label{:for => "checkbox8"}
@@ -107,6 +121,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[8].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[8]), class: "task__index--edit--link"
     .round.position
       %input#checkbox9.BR-btn{:type => "checkbox"}/
       %label{:for => "checkbox9"}
