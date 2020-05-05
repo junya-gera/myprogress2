@@ -16,7 +16,6 @@ class PuzzlesController < ApplicationController
   def edit
     @user = User.find(params[:user_id])
     @puzzle = Puzzle.find(params[:id])
-    
   end
   
   def create
@@ -29,7 +28,7 @@ class PuzzlesController < ApplicationController
     if @puzzle.update(puzzle_params)
       redirect_to user_puzzles_path(current_user)
     else
-      render :index
+      render :edit
     end
   end
   

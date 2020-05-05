@@ -14,6 +14,12 @@
   %p.task--puzzle__edit--header タスクパズルの編集
   .task--puzzle__edit--unit
     = form_for @puzzle, url: user_puzzle_path do |f|
+      - if @puzzle.errors.any?
+        #error_explanation
+          %ul
+            - @puzzle.errors.full_messages.each do |message|
+              %li= message
+
       .field.puzzle__form--field
         = f.label :タスク：, class: "puzzle__form--label"
         = f.text_field :task, class: "puzzle__form--title--input"
