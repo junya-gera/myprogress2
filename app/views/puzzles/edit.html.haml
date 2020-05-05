@@ -11,5 +11,6 @@
         = link_to "タスクパズル", user_puzzles_path(current_user), class: "user--info__edit"
 
 .task--puzzle__edit
-  .task--puzzle__edit--header
-    %p タスクパズルの編集
+  %p.task--puzzle__edit--header タスクパズルの編集
+  .task--puzzle__edit--unit
+    = "タスク#{}:"
