@@ -10,10 +10,14 @@ class PuzzlesController < ApplicationController
           Puzzle.create(user_id: @user.id)
         end
       end
-      @puzzle = @puzzles.first
+      # @puzzle = @puzzles.first
     end
   end
 
+  def edit
+    @puzzles = Puzzle.where(user_id: current_user)
+  end
+  
   def create
     @puzzle = Puzzle.create(puzzle_params)
     redirect_to user_puzzles_path(current_user)
