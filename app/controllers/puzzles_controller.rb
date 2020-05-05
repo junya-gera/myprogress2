@@ -14,6 +14,7 @@ class PuzzlesController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:user_id])
     @puzzle = Puzzle.find(params[:id])
   end
   
