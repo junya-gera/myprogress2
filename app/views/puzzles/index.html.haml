@@ -23,7 +23,7 @@
   - @puzzles.each do |puzzle|
     .task-modal__edit
       %p タスク1
-      = form_for model: puzzle, url: user_puzzle_path do |f|
+      = form_with(model: puzzle, url: user_puzzle_path, method: :patch) do |f|
         = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
         = f.submit '決定',id:"task-btn-1" , class:"task-modal__btn"
 
