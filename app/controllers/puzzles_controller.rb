@@ -10,6 +10,7 @@ class PuzzlesController < ApplicationController
           Puzzle.create(user_id: @user.id)
         end
       end
+      @puzzle = @puzzles.first
     end
   end
 
