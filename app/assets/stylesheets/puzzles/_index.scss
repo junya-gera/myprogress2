@@ -36,12 +36,14 @@
   border: 3px groove $color4;
   &--edit{
     display: inline-block;
-    border-bottom: 1px solid blue;
-    margin-left: 80px;
     &--link{
+      border-bottom: 1px solid blue;
       text-decoration: none;
       color: black; 
       transition: all 0.3s ease 0s;
+      position: absolute;
+      right: 50px;
+      top: 18px;
     }
     &--link:hover{
       color: #4689FF;
