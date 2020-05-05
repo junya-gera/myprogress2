@@ -34,7 +34,7 @@ class PuzzlesController < ApplicationController
   
 private
   def puzzle_params
-    params.permit(:task).merge(user_id: current_user.id)
+    params.require(:puzzle).permit(:task).merge(user_id: current_user.id)
   end
   
 end

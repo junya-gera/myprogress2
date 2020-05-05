@@ -13,7 +13,7 @@
 .task--puzzle__edit
   %p.task--puzzle__edit--header タスクパズルの編集
   .task--puzzle__edit--unit
-    = form_for @puzzle, url: user_puzzle_path do |f|
+    = form_for @puzzle, url: user_puzzle_path, method: :patch do |f|
       - if @puzzle.errors.any?
         #error_explanation
           %ul
