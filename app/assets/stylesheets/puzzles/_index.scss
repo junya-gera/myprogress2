@@ -114,60 +114,6 @@
   }
 }
 
-.task-modal{
-  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .6);
-  display: none;
-  background-color: #fff;
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  right: 100px;
-  width: 540px;
-  height: 653px;
-  border-radius: 10px;
-  border: 5px solid #3366FF;
-  &__title{
-    background-color: $color2;
-    height: 50px;
-    border-bottom: 1px solid silver;
-    display: flex;
-    align-items: center;
-    &--text{
-      margin: 0 auto;
-      font-size: 20px;
-    }
-  }
-  &__edit{
-    height: 60px;
-    border-bottom: 1px solid silver;
-    display: flex;
-    align-items: center;
-    padding:3px 0;
-  }
-  &__edit p{
-    font-size: 20px;
-    line-height: 60px;
-    padding-left: 5px;
-  }
-  &__input{
-    border-radius: 4px;
-    margin-left: 10px;
-    height: 30px;
-    font-size: 20px;
-    width: 370px;
-  }
-  &__btn{
-    margin-left: 10px;
-    padding: 20px;
-  }
-}
-
-#modal-close{
-  margin-right: 10px;
-  color: red;
-  cursor: pointer;
-}
-
 /*チェックボタン始まり*/
 .round {
   position: relative;
