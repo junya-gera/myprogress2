@@ -1,0 +1,46 @@
+.task--puzzle__edit{
+  position: absolute;
+  top: 0;
+  left: 18%;
+  height: 40%;
+  margin:100px auto 0;
+  width: 70%;
+  border: 2px solid $color3;
+  box-shadow: 4px 4px $color4;
+  background-color: $color2;
+  &--header{
+    border-bottom: 1px solid $color3;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  &--unit{
+    padding: 30px;
+  }
+}
+
+.puzzle__form--label{
+  font-size: 28px;
+}
+
+.puzzle__form--title--input{
+  font-size: 24px;
+  width: 100%;
+  padding:6px;
+}
+
+.puzzle__form--btn{
+  background-color: $color4;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 2px 2px #03f;
+  cursor: pointer;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 8px 18px;
+  margin-top: 20px;
+  left: 0;
+}

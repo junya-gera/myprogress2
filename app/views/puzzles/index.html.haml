@@ -10,69 +10,6 @@
         = link_to "タスクの追加", new_user_event_path(current_user), class: "user--info__edit"
         = link_to "タスクパズル", user_puzzles_path(current_user), class: "user--info__edit"
 
-.puzzle__menu
-  .task__edit
-    %p.task__edit--link#task-modal-show タスクの編集
-
-.task-modal
-  .task-modal__title
-    %p.task-modal__title--text タスクを入力してください
-    .fas.fa-window-close.fa-lg#modal-close
-
-  .task-modal__edit
-    %p タスク1
-    = form_with(model: @puzzle, local: true, id: "input-task-1") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-1" , class:"task-modal__btn"
-
-  .task-modal__edit
-    %p タスク2
-    = form_with(model: @puzzle, local: true, id: "input-task-2") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-2" , class:"task-modal__btn"
-
-  .task-modal__edit
-    %p タスク3
-    = form_with(model: @puzzle, local: true, id: "input-task-3") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-3" , class:"task-modal__btn"
-
-  .task-modal__edit
-    %p タスク4
-    = form_with(model: @puzzle, local: true, id: "input-task-4") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-4" , class:"task-modal__btn"
-
-  .task-modal__edit
-    %p タスク5
-    = form_with(model: @puzzle, local: true, id: "input-task-5") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-5" , class:"task-modal__btn"
-
-  .task-modal__edit
-    %p タスク6
-    = form_with(model: @puzzle, local: true, id: "input-task-6") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-6" , class:"task-modal__btn"
-
-  .task-modal__edit
-    %p タスク7
-    = form_with(model: @puzzle, local: true, id: "input-task-7") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-7" , class:"task-modal__btn"
-
-  .task-modal__edit
-    %p タスク8
-    = form_with(model: @puzzle, local: true, id: "input-task-8") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-8" , class:"task-modal__btn"
-
-  .task-modal__edit
-    %p タスク9
-    = form_with(model: @puzzle, local: true, id: "input-task-9") do |f|
-      = f.text_field :task, placeholder: "タスクを入力", class: "task-modal__input"
-      = f.submit '決定',id:"task-btn-9" , class:"task-modal__btn"
-
 .task__index
   .task__index--unit1
     %p タスク1:
@@ -80,6 +17,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[0].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[0]), class: "task__index--edit--link"
     .round.position
       %input#checkbox.TL-btn{:type => "checkbox"}/
       %label{:for => "checkbox"}
@@ -91,6 +30,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[1].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[1]), class: "task__index--edit--link"
     .round.position
       %input#checkbox2.TC-btn{:type => "checkbox"}/
       %label{:for => "checkbox2"}
@@ -102,6 +43,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[2].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[2]), class: "task__index--edit--link"
     .round.position
       %input#checkbox3.TR-btn{:type => "checkbox"}/
       %label{:for => "checkbox3"}
@@ -113,6 +56,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[3].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[3]), class: "task__index--edit--link"
     .round.position
       %input#checkbox4.CL-btn{:type => "checkbox"}/
       %label{:for => "checkbox4"}
@@ -124,6 +69,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[4].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[4]), class: "task__index--edit--link"
     .round.position
       %input#checkbox5.CC-btn{:type => "checkbox"}/
       %label{:for => "checkbox5"}
@@ -135,6 +82,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[5].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[5]), class: "task__index--edit--link"
     .round.position
       %input#checkbox6.CR-btn{:type => "checkbox"}/
       %label{:for => "checkbox6"}
@@ -146,6 +95,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[6].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[6]), class: "task__index--edit--link"
     .round.position
       %input#checkbox7.BL-btn{:type => "checkbox"}/
       %label{:for => "checkbox7"}
@@ -157,6 +108,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[7].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[7]), class: "task__index--edit--link"
     .round.position
       %input#checkbox8.BC-btn{:type => "checkbox"}/
       %label{:for => "checkbox8"}
@@ -168,6 +121,8 @@
       %p タスクが入力されていません
     -else
       %p= @puzzles[8].task
+    .task__index--edit
+      = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[8]), class: "task__index--edit--link"
     .round.position
       %input#checkbox9.BR-btn{:type => "checkbox"}/
       %label{:for => "checkbox9"}
