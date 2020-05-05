@@ -8,4 +8,11 @@
   border: 2px solid $color3;
   box-shadow: 4px 4px $color4;
   background-color: $color2;
+  &--header{
+    border-bottom: 1px solid $color3;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+  }
 }
