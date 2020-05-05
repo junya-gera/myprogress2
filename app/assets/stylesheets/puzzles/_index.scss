@@ -26,22 +26,6 @@
   position: relative;
 }
 
-.task__edit{
-  margin-left: 30px;
-  line-height: 65px;
-  font-size: 18px;
-}
-
-.task__edit--link{
-  display: inline;
-  cursor: pointer;
-}
-
-.task__edit--link:hover{
-  transition: all 0.3s ease 0s;
-  border-bottom: 3px solid #0066FF;
-}
-
 .task__index{
   background-color: $color3;
   width: 540px;
@@ -50,6 +34,19 @@
   left: calc(12% + 30px);
   top: 115px;
   border: 3px groove $color4;
+  &--edit{
+    display: inline-block;
+    border-bottom: 1px solid blue;
+    margin-left: 80px;
+    &--link{
+      text-decoration: none;
+      color: black; 
+      transition: all 0.3s ease 0s;
+    }
+    &--link:hover{
+      color: #4689FF;
+    }
+  }
   &--unit1{
     @include task-box;
   }
