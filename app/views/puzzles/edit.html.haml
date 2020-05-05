@@ -12,10 +12,10 @@
 
 .task--puzzle__edit
   %p.task--puzzle__edit--header タスクパズルの編集
-  %p.task--puzzle__edit--unit
-  = form_for @puzzle, url: user_puzzle_path do |f|
-    .field.puzzle__form--field
-      = f.label :タスク：, class: "puzzle__form--label"
-      = f.text_field :task, class: "puzzle__form--title--input"
-    .actions
-      = f.submit '編集', class: "event__form--btn"
+  .task--puzzle__edit--unit
+    = form_for @puzzle, url: user_puzzle_path do |f|
+      .field.puzzle__form--field
+        = f.label :タスク：, class: "puzzle__form--label"
+        = f.text_field :task, class: "puzzle__form--title--input"
+      .actions
+        = f.submit '編集', class: "puzzle__form--btn"
