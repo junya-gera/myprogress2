@@ -10,12 +10,11 @@ class PuzzlesController < ApplicationController
           Puzzle.create(user_id: @user.id)
         end
       end
-      # @puzzle = @puzzles.first
     end
   end
 
   def edit
-    @puzzles = Puzzle.where(user_id: current_user)
+    @puzzle = Puzzle.find(params[:id])
   end
   
   def create
