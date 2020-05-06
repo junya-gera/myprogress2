@@ -24,7 +24,7 @@ class EventsController < ApplicationController
     @puzzles = Puzzle.where(user_id: current_user)
     if @puzzles == []
       9.times do
-        Puzzle.create(user_id: @user.id)
+        Puzzle.create(user_id: @user.id, task: "タスクが入力されていません")
       end
     end
 
