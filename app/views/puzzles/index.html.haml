@@ -8,7 +8,7 @@
       -if user_signed_in? && @user.id == current_user.id
         = link_to "プロフィール編集", edit_user_path(current_user), class: "user--info__edit", method: :get
         = link_to "タスクの追加", new_user_event_path(current_user), class: "user--info__edit"
-        = link_to "タスクパズル", user_puzzles_path(current_user), class: "user--info__edit"
+      = link_to "タスクパズル", user_puzzles_path(@user), class: "user--info__edit"
 
 .task__index
   .task__index--unit1
