@@ -25,3 +25,5 @@
         = f.text_field :task, class: "puzzle__form--title--input"
       .actions
         = f.submit '編集', class: "puzzle__form--btn"
+        = link_to "キャンセル", user_puzzles_path(current_user), class: "puzzle--cancel"
+
