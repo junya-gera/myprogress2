@@ -26,12 +26,11 @@
             = f.hidden_field :email ,value: "test@example.com"
             = f.hidden_field :password ,value: "testtest"
             = f.submit "かんたんログイン", class:"btn easybtn"
+
+          = link_to "新規登録", new_registration_path(resource_name), class:"btn registration--btn" 
           = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post, class: "btn facebook--btn"
           = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class: "btn google--btn"
 
-
-        - if devise_mapping.registerable? && controller_name != 'registrations'
-          = link_to "新規登録", new_registration_path(resource_name), class:"sign__container--registration devise--link" 
           %br
         - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
           = link_to "パスワードをお忘れですか？", new_password_path(resource_name),class:"sign__container--recover devise--link"
