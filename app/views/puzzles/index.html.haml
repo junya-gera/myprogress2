@@ -18,6 +18,7 @@
     -else
       %p= @puzzles[0].task
     .task__index--edit
+    -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[0]), class: "task__index--edit--link"
     .round.position
       %input#checkbox.TL-btn{:type => "checkbox"}/
@@ -31,6 +32,7 @@
     -else
       %p= @puzzles[1].task
     .task__index--edit
+    -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[1]), class: "task__index--edit--link"
     .round.position
       %input#checkbox2.TC-btn{:type => "checkbox"}/
@@ -44,6 +46,7 @@
     -else
       %p= @puzzles[2].task
     .task__index--edit
+    -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[2]), class: "task__index--edit--link"
     .round.position
       %input#checkbox3.TR-btn{:type => "checkbox"}/
@@ -57,6 +60,7 @@
     -else
       %p= @puzzles[3].task
     .task__index--edit
+    -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[3]), class: "task__index--edit--link"
     .round.position
       %input#checkbox4.CL-btn{:type => "checkbox"}/
@@ -70,6 +74,7 @@
     -else
       %p= @puzzles[4].task
     .task__index--edit
+    -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[4]), class: "task__index--edit--link"
     .round.position
       %input#checkbox5.CC-btn{:type => "checkbox"}/
@@ -83,6 +88,7 @@
     -else
       %p= @puzzles[5].task
     .task__index--edit
+    -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[5]), class: "task__index--edit--link"
     .round.position
       %input#checkbox6.CR-btn{:type => "checkbox"}/
@@ -96,6 +102,7 @@
     -else
       %p= @puzzles[6].task
     .task__index--edit
+    -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[6]), class: "task__index--edit--link"
     .round.position
       %input#checkbox7.BL-btn{:type => "checkbox"}/
@@ -109,6 +116,7 @@
     -else
       %p= @puzzles[7].task
     .task__index--edit
+    -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[7]), class: "task__index--edit--link"
     .round.position
       %input#checkbox8.BC-btn{:type => "checkbox"}/
@@ -122,6 +130,7 @@
     -else
       %p= @puzzles[8].task
     .task__index--edit
+    -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[8]), class: "task__index--edit--link"
     .round.position
       %input#checkbox9.BR-btn{:type => "checkbox"}/
