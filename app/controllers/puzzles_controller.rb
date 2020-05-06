@@ -2,15 +2,7 @@ class PuzzlesController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
-    if user_signed_in?
-      @puzzles = Puzzle.where(user_id: current_user)
-
-      if @puzzles == []
-        9.times do
-          Puzzle.create(user_id: @user.id)
-        end
-      end
-    end
+    @puzzles = Puzzle.where(user_id: current_user)
   end
 
   def edit
