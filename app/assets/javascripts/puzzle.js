@@ -79,7 +79,7 @@ $(document).on("turbolinks:load", function() {
     lineCtx.stroke();
   };
     
-  image.src = "/public/usagi2.png";
+  image.src = "/images/usagi2.png";
 
   $('#task-btn-1').click(function(){
     let task1 = $('#input-task-1').val();
