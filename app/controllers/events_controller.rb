@@ -33,7 +33,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
-    
+    @user = User.find(params[:user_id])
   end
 
   # GET /events/new
