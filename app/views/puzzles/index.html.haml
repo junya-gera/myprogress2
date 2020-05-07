@@ -13,10 +13,7 @@
 .task__index
   .task__index--unit1
     %p タスク1:
-    -if @puzzles[0] === nil
-      %p タスクが入力されていません
-    -else
-      %p= @puzzles[0].task
+    %p= @puzzles[0].task
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[0]), class: "task__index--edit--link"
@@ -27,10 +24,7 @@
 
   .task__index--unit2
     %p タスク2:
-    -if @puzzles[1] === nil
-      %p タスクが入力されていません
-    -else
-      %p= @puzzles[1].task
+    %p= @puzzles[1].task
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[1]), class: "task__index--edit--link"
@@ -41,10 +35,7 @@
 
   .task__index--unit3
     %p タスク3:
-    -if @puzzles[2] === nil
-      %p タスクが入力されていません
-    -else
-      %p= @puzzles[2].task
+    %p= @puzzles[2].task
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[2]), class: "task__index--edit--link"
@@ -55,10 +46,7 @@
 
   .task__index--unit4
     %p タスク4:
-    -if @puzzles[3] === nil
-      %p タスクが入力されていません
-    -else
-      %p= @puzzles[3].task
+    %p= @puzzles[3].task
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[3]), class: "task__index--edit--link"
@@ -69,10 +57,7 @@
     
   .task__index--unit5
     %p タスク5:
-    -if @puzzles[4] === nil
-      %p タスクが入力されていません
-    -else
-      %p= @puzzles[4].task
+    %p= @puzzles[4].task
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[4]), class: "task__index--edit--link"
@@ -83,10 +68,7 @@
 
   .task__index--unit6
     %p タスク6:
-    -if @puzzles[5] === nil
-      %p タスクが入力されていません
-    -else
-      %p= @puzzles[5].task
+    %p= @puzzles[5].task
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[5]), class: "task__index--edit--link"
@@ -97,10 +79,7 @@
 
   .task__index--unit7
     %p タスク7:
-    -if @puzzles[6] === nil
-      %p タスクが入力されていません
-    -else
-      %p= @puzzles[6].task
+    %p= @puzzles[6].task
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[6]), class: "task__index--edit--link"
@@ -111,10 +90,7 @@
   
   .task__index--unit8
     %p タスク8:
-    -if @puzzles[7] === nil
-      %p タスクが入力されていません
-    -else
-      %p= @puzzles[7].task
+    %p= @puzzles[7].task
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[7]), class: "task__index--edit--link"
@@ -125,10 +101,7 @@
 
   .task__index--unit9
     %p タスク9:
-    -if @puzzles[8] === nil
-      %p タスクが入力されていません
-    -else
-      %p= @puzzles[8].task
+    %p= @puzzles[8].task
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[8]), class: "task__index--edit--link"
