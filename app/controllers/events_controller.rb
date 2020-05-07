@@ -44,6 +44,7 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+    @user = User.find(params[:user_id])
   end
 
   # POST /events
