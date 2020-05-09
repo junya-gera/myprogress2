@@ -17,9 +17,11 @@
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[0]), class: "task__index--edit--link"
-    .round.position
-      %input#checkbox.TL-btn{:type => "checkbox"}/
-      %label{:for => "checkbox"}
+    -if @puzzles[0].square
+      = link_to "aaa",user_puzzle_path(@user,@puzzles[0],puzzle: {square: false}), method: :put, class: 'fa fa-check-square-o'
+    - else
+      = link_to "sss",user_puzzle_path(@user,@puzzles[0],puzzle: {square: true}), method: :put, class: 'fa fa-square-o'
+
 
 
   .task__index--unit2
