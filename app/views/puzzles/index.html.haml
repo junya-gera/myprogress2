@@ -30,9 +30,10 @@
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[1]), class: "task__index--edit--link"
-    .round.position
-      %input#checkbox2.TC-btn{:type => "checkbox"}/
-      %label{:for => "checkbox2"}
+    -if @puzzles[1].square
+      = link_to "",user_puzzle_path(@user,@puzzles[1],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+    - else
+      = link_to "",user_puzzle_path(@user,@puzzles[1],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
 
   .task__index--unit3
@@ -41,9 +42,10 @@
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[2]), class: "task__index--edit--link"
-    .round.position
-      %input#checkbox3.TR-btn{:type => "checkbox"}/
-      %label{:for => "checkbox3"}
+    -if @puzzles[2].square
+      = link_to "",user_puzzle_path(@user,@puzzles[2],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+    - else
+      = link_to "",user_puzzle_path(@user,@puzzles[2],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
 
   .task__index--unit4
@@ -52,9 +54,10 @@
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[3]), class: "task__index--edit--link"
-    .round.position
-      %input#checkbox4.CL-btn{:type => "checkbox"}/
-      %label{:for => "checkbox4"}
+    -if @puzzles[3].square
+      = link_to "",user_puzzle_path(@user,@puzzles[3],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+    - else
+      = link_to "",user_puzzle_path(@user,@puzzles[3],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
     
   .task__index--unit5
@@ -63,9 +66,10 @@
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[4]), class: "task__index--edit--link"
-    .round.position
-      %input#checkbox5.CC-btn{:type => "checkbox"}/
-      %label{:for => "checkbox5"}
+    -if @puzzles[4].square
+      = link_to "",user_puzzle_path(@user,@puzzles[4],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+    - else
+      = link_to "",user_puzzle_path(@user,@puzzles[4],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
 
   .task__index--unit6
@@ -74,9 +78,10 @@
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[5]), class: "task__index--edit--link"
-    .round.position
-      %input#checkbox6.CR-btn{:type => "checkbox"}/
-      %label{:for => "checkbox6"}
+    -if @puzzles[5].square
+      = link_to "",user_puzzle_path(@user,@puzzles[5],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+    - else
+      = link_to "",user_puzzle_path(@user,@puzzles[5],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
 
   .task__index--unit7
@@ -85,9 +90,10 @@
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[6]), class: "task__index--edit--link"
-    .round.position
-      %input#checkbox7.BL-btn{:type => "checkbox"}/
-      %label{:for => "checkbox7"}
+    -if @puzzles[6].square
+      = link_to "",user_puzzle_path(@user,@puzzles[6],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+    - else
+      = link_to "",user_puzzle_path(@user,@puzzles[6],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
   
   .task__index--unit8
@@ -96,10 +102,10 @@
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[7]), class: "task__index--edit--link"
-    .round.position
-      %input#checkbox8.BC-btn{:type => "checkbox"}/
-      %label{:for => "checkbox8"}
-
+    -if @puzzles[7].square
+      = link_to "",user_puzzle_path(@user,@puzzles[7],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+    - else
+      = link_to "",user_puzzle_path(@user,@puzzles[7],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
   .task__index--unit9
     %p タスク9:
@@ -107,16 +113,18 @@
     .task__index--edit
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[8]), class: "task__index--edit--link"
-    .round.position
-      %input#checkbox9.BR-btn{:type => "checkbox"}/
-      %label{:for => "checkbox9"}
-
+    -if @puzzles[8].square
+      = link_to "",user_puzzle_path(@user,@puzzles[8],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+    - else
+      = link_to "",user_puzzle_path(@user,@puzzles[8],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 .canvas--wrapper
 
   %canvas#stage{:height => "540", :width => "540"}
+  %canvas#line{:height => "540", :width => "540"}
+
   -if @puzzles[0].square  
     %canvas#top-left{:height => "180", :width => "180"}
-  -if @puzzles[1].square  
+  -if @puzzles[1].square
     %canvas#top-center{:height => "180", :width => "180"}
   -if @puzzles[2].square  
     %canvas#top-right{:height => "180", :width => "180"}
@@ -132,4 +140,3 @@
     %canvas#bottom-center{:height => "180", :width => "180"}
   -if @puzzles[8].square  
     %canvas#bottom-right{:height => "180", :width => "180"}
-  %canvas#line{:height => "540", :width => "540"}
