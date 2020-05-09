@@ -81,49 +81,4 @@ $(document).on("turbolinks:load", function() {
     
   image.src = "/images/usagi2.png";
 
-  $('.BC-btn').click(function(){
-    $(this).toggleClass('is-checked');
-    $('#top-left').toggle('shake');
-  });
-
-  $('.TR-btn').click(function(){
-    $(this).toggleClass('is-checked');
-    $('#top-center').toggle('shake');
-  });
-
-  $('.CL-btn').click(function(){
-    $(this).toggleClass('is-checked');
-    $('#top-right').toggle('shake');
-  });
-
-  $('.CC-btn').click(function(){
-    $(this).toggleClass('is-checked');
-    $('#center-left').toggle('shake');
-  });
-
-  $('.BL-btn').click(function(){
-    $(this).toggleClass('is-checked');
-    $('#center-center').toggle('shake');
-  });
-
-  $('.TL-btn').click(function(){
-    $(this).toggleClass('is-checked');
-    $('#center-right').toggle('shake');
-  });
-
-  $('.BR-btn').click(function(){
-    $(this).toggleClass('is-checked');
-    $('#bottom-left').toggle('shake');
-  });
-
-  $('.TC-btn').click(function(){
-    $(this).toggleClass('is-checked');
-    $('#bottom-center').toggle('shake');
-  });
-
-  $('.CR-btn').click(function(){
-    $(this).toggleClass('is-checked');
-    $('#bottom-right').toggle('shake');
-  });
-
 })
