@@ -18,9 +18,9 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[0]), class: "task__index--edit--link"
     -if @puzzles[0].square
-      = link_to "aaa",user_puzzle_path(@user,@puzzles[0],puzzle: {square: false}), method: :put, class: 'fa fa-check-square-o'
+      = link_to "",user_puzzle_path(@user,@puzzles[0],puzzle: {square: false}), method: :put, class: 'fa fa-check-square fa-lg puzzle-check'
     - else
-      = link_to "sss",user_puzzle_path(@user,@puzzles[0],puzzle: {square: true}), method: :put, class: 'fa fa-square-o'
+      = link_to "",user_puzzle_path(@user,@puzzles[0],puzzle: {square: true}), method: :put, class: 'fa fa-square fa-lg puzzle-check'
 
 
 
