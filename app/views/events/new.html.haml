@@ -48,4 +48,4 @@
             %td.event__unit--end_date= event.end_date.to_s(:datetime_jp)
             %td.event__unit--btn=link_to "詳細", user_event_path(current_user,event),class: "underline-none"
             %td.event__unit--btn=link_to "編集", edit_user_event_path(current_user,event),class: "underline-none"
-            %td.event__unit--btn.delete--btn=link_to "削除", user_event_path(current_user,event), method: :delete,class: "underline-none color-white"
+            %td.event__unit--btn.delete--btn=link_to "削除", user_event_path(current_user,event), method: :delete, remote: true,class: "underline-none color-white"
