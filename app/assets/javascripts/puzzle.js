@@ -5,8 +5,6 @@ $(document).on("turbolinks:load", function() {
     const canvas = document.getElementById("stage");
     const ctx = canvas.getContext("2d");
     
-
-    
     const a = ctx.drawImage(image,
       0, 0, 540, 540,
       0, 0, 540, 540);
