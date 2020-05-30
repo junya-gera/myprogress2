@@ -1,11 +1,13 @@
 $(document).on("turbolinks:load", function() {
 
   const image = new Image();
+  image.src = "/images/usagi2.png";
+
   image.onload = function(e){
     const canvas = document.getElementById("stage");
     const ctx = canvas.getContext("2d");
     
-    const a = ctx.drawImage(image,
+    ctx.drawImage(image,
       0, 0, 540, 540,
       0, 0, 540, 540);
 
@@ -77,6 +79,5 @@ $(document).on("turbolinks:load", function() {
     lineCtx.stroke();
   };
     
-  image.src = "/images/usagi2.png";
 
 })
