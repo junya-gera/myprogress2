@@ -18,9 +18,9 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[0]), class: "task__index--edit--link"
       -if @puzzles[0].square
-        = link_to "",user_puzzle_path(@user,@puzzles[0],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[0],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
       - else
-        = link_to "",user_puzzle_path(@user,@puzzles[0],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[0],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
 
 
@@ -31,9 +31,9 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[1]), class: "task__index--edit--link"
       -if @puzzles[1].square
-        = link_to "",user_puzzle_path(@user,@puzzles[1],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[1],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
       - else
-        = link_to "",user_puzzle_path(@user,@puzzles[1],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[1],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
 
   .task__index--unit3
@@ -43,9 +43,9 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[2]), class: "task__index--edit--link"
       -if @puzzles[2].square
-        = link_to "",user_puzzle_path(@user,@puzzles[2],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[2],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
       - else
-        = link_to "",user_puzzle_path(@user,@puzzles[2],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[2],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
 
   .task__index--unit4
@@ -55,9 +55,9 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[3]), class: "task__index--edit--link"
       -if @puzzles[3].square
-        = link_to "",user_puzzle_path(@user,@puzzles[3],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[3],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
       - else
-        = link_to "",user_puzzle_path(@user,@puzzles[3],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[3],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
     
   .task__index--unit5
@@ -67,9 +67,9 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[4]), class: "task__index--edit--link"
       -if @puzzles[4].square
-        = link_to "",user_puzzle_path(@user,@puzzles[4],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[4],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
       - else
-        = link_to "",user_puzzle_path(@user,@puzzles[4],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[4],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
 
   .task__index--unit6
@@ -79,9 +79,9 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[5]), class: "task__index--edit--link"
       -if @puzzles[5].square
-        = link_to "",user_puzzle_path(@user,@puzzles[5],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[5],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
       - else
-        = link_to "",user_puzzle_path(@user,@puzzles[5],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[5],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
 
   .task__index--unit7
@@ -91,9 +91,9 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[6]), class: "task__index--edit--link"
       -if @puzzles[6].square
-        = link_to "",user_puzzle_path(@user,@puzzles[6],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[6],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
       - else
-        = link_to "",user_puzzle_path(@user,@puzzles[6],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[6],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
   
   .task__index--unit8
@@ -103,9 +103,9 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[7]), class: "task__index--edit--link"
       -if @puzzles[7].square
-        = link_to "",user_puzzle_path(@user,@puzzles[7],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[7],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
       - else
-        = link_to "",user_puzzle_path(@user,@puzzles[7],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[7],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 
   .task__index--unit9
     %p タスク9:
@@ -114,56 +114,56 @@
     -if user_signed_in? && @user.id == current_user.id
       = link_to "編集", edit_user_puzzle_path(current_user,@puzzles[8]), class: "task__index--edit--link"
       -if @puzzles[8].square
-        = link_to "",user_puzzle_path(@user,@puzzles[8],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[8],puzzle: {square: false}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
       - else
-        = link_to "",user_puzzle_path(@user,@puzzles[8],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-check-square fa-lg puzzle-check'
+        = link_to "",user_puzzle_path(@user,@puzzles[8],puzzle: {square: true}), method: :put, remote: true, class: 'fa fa-square fa-lg puzzle-check'
 .canvas--wrapper
 
   %canvas#stage{:height => "540", :width => "540"}
   %canvas#line{:height => "540", :width => "540"}
 
   -if @puzzles[0].square  
-    %canvas#top-left{:height => "180", :width => "180"}
-  -else
     %canvas#top-left.disabled{:height => "180", :width => "180"}
+  -else
+    %canvas#top-left{:height => "180", :width => "180"}
 
   -if @puzzles[1].square
-    %canvas#top-center{:height => "180", :width => "180"}
-  -else
     %canvas#top-center.disabled{:height => "180", :width => "180"}
+  -else
+    %canvas#top-center{:height => "180", :width => "180"}
 
   -if @puzzles[2].square  
-    %canvas#top-right{:height => "180", :width => "180"}
-  -else
     %canvas#top-right.disabled{:height => "180", :width => "180"}
+  -else
+    %canvas#top-right{:height => "180", :width => "180"}
 
   -if @puzzles[3].square  
-    %canvas#center-left{:height => "180", :width => "180"}
-  -else
     %canvas#center-left.disabled{:height => "180", :width => "180"}
+  -else
+    %canvas#center-left{:height => "180", :width => "180"}
 
   -if @puzzles[4].square  
-    %canvas#center-center{:height => "180", :width => "180"}
-  -else
     %canvas#center-center.disabled{:height => "180", :width => "180"}
+  -else
+    %canvas#center-center{:height => "180", :width => "180"}
 
   -if @puzzles[5].square  
-    %canvas#center-right{:height => "180", :width => "180"}
-  -else
     %canvas#center-right.disabled{:height => "180", :width => "180"}
+  -else
+    %canvas#center-right{:height => "180", :width => "180"}
 
   -if @puzzles[6].square  
-    %canvas#bottom-left{:height => "180", :width => "180"}
-  -else
     %canvas#bottom-left.disabled{:height => "180", :width => "180"}
+  -else
+    %canvas#bottom-left{:height => "180", :width => "180"}
 
   -if @puzzles[7].square  
-    %canvas#bottom-center{:height => "180", :width => "180"}
-  -else
     %canvas#bottom-center.disabled{:height => "180", :width => "180"}
+  -else
+    %canvas#bottom-center{:height => "180", :width => "180"}
 
   -if @puzzles[8].square  
-    %canvas#bottom-right{:height => "180", :width => "180"}
-  -else
     %canvas#bottom-right.disabled{:height => "180", :width => "180"}
+  -else
+    %canvas#bottom-right{:height => "180", :width => "180"}
 
