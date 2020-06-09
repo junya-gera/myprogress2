@@ -19,5 +19,3 @@ RUN bundle install
 
 # ローカルのディレクトリ、ファイルをコンテナ上にコピー
 ADD . /myprogress
-
-RUN mkdir -p tmp/sockets
